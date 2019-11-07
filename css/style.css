@@ -21,6 +21,10 @@ td {
   border: 1px solid black;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:link {
   color: white;
 }
@@ -49,6 +53,10 @@ a:visited {
   border: 3px solid white;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+#about-title {
+  text-align: center;
 }
 
 #episodes {
