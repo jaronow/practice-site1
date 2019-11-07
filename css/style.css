@@ -51,8 +51,12 @@ a:visited {
 
 #about {
   border: 3px solid white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 1.5em 0;
+  text-align: justify;
+}
+
+.about-text {
+  padding: 0 1.2em;
 }
 
 #about-title {
@@ -61,20 +65,18 @@ a:visited {
 
 #episodes {
   border: 3px solid white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 1.5em 0;
 }
 
 .naruto-movies {
-  margin-top: 20px;
+  margin-top: 1.2em;
 }
 
 .shippuuden-movies {
-  margin-top: 20px;
+  margin-top: 1.2em;
 }
 
 #characters {
   border: 3px solid white;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 1.5em 0;
 }
