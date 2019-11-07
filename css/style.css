@@ -1,6 +1,8 @@
 body {
   color: white;
   background-color: blue;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.15em
 }
 
 img {
