@@ -1,6 +1,6 @@
 body {
   color: white;
-  background-color: blue;
+  background: linear-gradient(to bottom, rgb(3, 13, 143), rgb(27, 129, 224));
   font-family: 'Oxygen', sans-serif;
   font-size: 1.15em
 }
