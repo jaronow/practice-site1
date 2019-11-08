@@ -2,7 +2,7 @@ body {
   color: white;
   background: linear-gradient(to bottom, rgb(3, 13, 143), rgb(27, 129, 224));
   font-family: 'Oxygen', sans-serif;
-  font-size: 1.15em
+  font-size: 1.15em;
 }
 
 img {
@@ -52,6 +52,7 @@ button[name="shippuuden"] {
 
 #site-header {
   display: flex;
+  flex-grow: 1;
   border: 3px solid white;
   align-items: center;
 }
@@ -60,14 +61,13 @@ button[name="shippuuden"] {
   display: flex;
   margin-left: auto;
   align-items: center;
-  justify-content: space-around;
   width: 35%;
 }
 
 .top-nav-links {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 #side-nav-bar {
@@ -149,6 +149,14 @@ button[name="shippuuden"] {
 .character-list-title {
   text-align: center;
   border-bottom: 1px dashed white;
+}
+
+.character-list {
+  display: flex;
+  padding-left: 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .pic-note {
