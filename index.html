@@ -8,9 +8,9 @@
   </head>
   <body>
     <header id="site-header">
+      <h1 class="header-title">World Of Naruto</h1>
       <nav id="top-nav-bar">
-        <h1>World Of Naruto</h1>
-        <ul class="nav-links">
+        <ul class="top-nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#episodes">Episodes & Movies</a></li>
           <li><a href="#characters">Characters</a></li>
@@ -18,9 +18,8 @@
       </nav>
     </header>
     <img src="images/naruto-rasengan-by-kortrex-d7xblkk.jpg" alt="teen naruto doing rasengan">
-
     <nav id="side-nav-bar">
-      <ul>
+      <ul class="side-nav-links">
         <li><a href="#">About Section</a></li>
         <li><a href="#">Naruto Episode Guide</a></li>
         <li><a href="#">Naruto Movie Guide</a></li>
@@ -30,7 +29,6 @@
         <li><a href="#">Sand Characters</a></li>
       </ul>
     </nav>
-
     <section id="about">
       <img src="images/naruto-618-by-i-azu-d5tg7ey.jpg" alt="first four hokage reanimated jutsu">
       <h2 id="about-title">What Is Naruto?</h2>
@@ -45,21 +43,29 @@
 
     <section id="episodes">
       <img src="images/naruto-vs-sasuke-by-epistafy-d3ldayt.jpg" alt="naruto vs sasuke">
+      <div class="series-episode-selection">
+        <h2>Select Series Episode List:</h2>
+        <div class="episode-selection-btn">
+          <button type="button" name="naruto">Naruto</button>
+          <button type="button" name="shippuuden">Naruto Shippuuden</button>
+        </div>
+      </div>
       <h2 class="naruto-episodes">Naruto Episode List</h2>
       <ul class="naruto-table-buttons">
-        <button type="button" name="button">Season 1</button>
-        <button type="button" name="button">Season 2</button>
-        <button type="button" name="button">Season 3</button>
-        <button type="button" name="button">Season 4</button>
-        <button type="button" name="button">Season 5</button>
-        <button type="button" name="button">Season 6</button>
-        <button type="button" name="button">Season 7</button>
-        <button type="button" name="button">Season 8</button>
-        <button type="button" name="button">Season 9</button>
-        <button type="button" name="button">Movies</button>
+        <button type="button" name="ns1-button">Season 1</button>
+        <button type="button" name="ns2-button">Season 2</button>
+        <button type="button" name="ns3-button">Season 3</button>
+        <button type="button" name="ns4-button">Season 4</button>
+        <button type="button" name="ns5-button">Season 5</button>
+        <button type="button" name="ns6-button">Season 6</button>
+        <button type="button" name="ns7-button">Season 7</button>
+        <button type="button" name="ns8-button">Season 8</button>
+        <button type="button" name="ns9-button">Season 9</button>
+        <button type="button" name="nm-button">Movies</button>
       </ul>
       <div class="naruto-season-1-table">
         <table>
+          <caption>Season 1</caption>
           <thead>
             <tr>
               <th>#</th>
@@ -92,6 +98,7 @@
       </div>
       <div class="naruto-movies-table">
         <table>
+          <caption>Movies</caption>
           <thead>
             <th>#</th>
             <th>Title</th>
@@ -114,31 +121,32 @@
       </div>
       <h2 class="shippuuden-episodes">Naruto Shippuden Episode List</h2>
       <ul class="shippuuden-table-buttons">
-        <button type="button" name="button">Season 1</button>
-        <button type="button" name="button">Season 2</button>
-        <button type="button" name="button">Season 3</button>
-        <button type="button" name="button">Season 4</button>
-        <button type="button" name="button">Season 5</button>
-        <button type="button" name="button">Season 6</button>
-        <button type="button" name="button">Season 7</button>
-        <button type="button" name="button">Season 8</button>
-        <button type="button" name="button">Season 9</button>
-        <button type="button" name="button">Season 10</button>
-        <button type="button" name="button">Season 11</button>
-        <button type="button" name="button">Season 12</button>
-        <button type="button" name="button">Season 13</button>
-        <button type="button" name="button">Season 14</button>
-        <button type="button" name="button">Season 15</button>
-        <button type="button" name="button">Season 16</button>
-        <button type="button" name="button">Season 17</button>
-        <button type="button" name="button">Season 18</button>
-        <button type="button" name="button">Season 19</button>
-        <button type="button" name="button">Season 20</button>
-        <button type="button" name="button">Season 21</button>
-        <button type="button" name="button">Movies</button>
+        <button type="button" name="ss1-button">Season 1</button>
+        <button type="button" name="ss2-button">Season 2</button>
+        <button type="button" name="ss3-button">Season 3</button>
+        <button type="button" name="ss4-button">Season 4</button>
+        <button type="button" name="ss5-button">Season 5</button>
+        <button type="button" name="ss6-button">Season 6</button>
+        <button type="button" name="ss7-button">Season 7</button>
+        <button type="button" name="ss8-button">Season 8</button>
+        <button type="button" name="ss9-button">Season 9</button>
+        <button type="button" name="ss10-button">Season 10</button>
+        <button type="button" name="ss11-button">Season 11</button>
+        <button type="button" name="ss12-button">Season 12</button>
+        <button type="button" name="ss13-button">Season 13</button>
+        <button type="button" name="ss14-button">Season 14</button>
+        <button type="button" name="ss15-button">Season 15</button>
+        <button type="button" name="ss16-button">Season 16</button>
+        <button type="button" name="ss17-button">Season 17</button>
+        <button type="button" name="ss18-button">Season 18</button>
+        <button type="button" name="ss19-button">Season 19</button>
+        <button type="button" name="ss20-button">Season 20</button>
+        <button type="button" name="ss21-button">Season 21</button>
+        <button type="button" name="ssm-button">Movies</button>
       </ul>
       <div class="shippuuden-season-1-table">
         <table>
+          <caption>Season 1</caption>
           <thead>
             <th>#</th>
             <th>Title</th>
@@ -169,6 +177,7 @@
       </div>
       <div class="shippuuden-movies-table">
         <table>
+          <caption>Movies</caption>
           <thead>
             <th>#</th>
             <th>Title</th>

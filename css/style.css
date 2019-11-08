@@ -16,6 +16,7 @@ img[src="images/naruto-rasengan-by-kortrex-d7xblkk.jpg"] {
 
 table {
   border: 1px solid white;
+  width: 50%;
 }
 
 th {
@@ -38,12 +39,52 @@ a:hover {
   color: #bf1ce8;
 }
 
-#top-nav-bar {
+li {
+  list-style: none;
+}
 
+button[name="naruto"],
+button[name="shippuuden"] {
+  height: 3em;
+  width: 12em;
+  margin: 0 .75em;
+}
+
+#site-header {
+  display: flex;
+  border: 3px solid white;
+  align-items: center;
+}
+
+#top-nav-bar {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-around;
+  width: 35%;
+}
+
+.top-nav-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 #side-nav-bar {
+  display: flex;
+  border: 3px solid white;
+  height: 800px;
+  width: 20%;
+  align-items: center;
+}
 
+.side-nav-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid white;
+  height: 100%;
+  padding-left: 0;
 }
 
 #about {
@@ -65,14 +106,39 @@ a:hover {
   padding: 1.5em 0;
 }
 
+.series-episode-selection {
+  display: flex;
+  align-items: center;
+}
+
+.episode-selection-btn {
+  display: flex;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+}
+
 .naruto-episodes,
 .shippuuden-episodes {
   text-align: center;
+  padding: .4em 0;
 }
 
+.naruto-table-buttons,
+.shippuuden-table-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 0;
+}
+
+.naruto-season-1-table,
 .naruto-movies-table,
+.shippuuden-season-1-table,
 .shippuuden-movies-table {
-  margin-top: 1.2em;
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
 }
 
 #characters {
