@@ -1,8 +1,16 @@
 body {
+  display: grid;
   color: white;
   background: linear-gradient(to bottom, rgb(3, 13, 143), rgb(27, 129, 224));
   font-family: 'Oxygen', sans-serif;
   font-size: 1.15em;
+  grid-template:
+    "header header header"
+    "main-pic main-pic main-pic"
+    "side-nav about about"
+    "side-nav episodes episodes"
+    "side-nav characters characters"
+    "footer footer footer"
 }
 
 img {
@@ -11,12 +19,13 @@ img {
 }
 
 img[src="images/naruto-rasengan-by-kortrex-d7xblkk.jpg"] {
+  grid-area: main-pic;
   height: 1200px;
 }
 
 table {
   border: 1px solid white;
-  width: 50%;
+  width: 75%;
 }
 
 th {
@@ -46,7 +55,7 @@ li {
 button[name="naruto"],
 button[name="shippuuden"] {
   height: 3em;
-  width: 12em;
+  width: 8em;
   margin: 0 .75em;
 }
 
@@ -55,6 +64,7 @@ button[name="shippuuden"] {
   flex-grow: 1;
   border: 3px solid white;
   align-items: center;
+  grid-area: header;
 }
 
 #top-nav-bar {
@@ -72,22 +82,24 @@ button[name="shippuuden"] {
 
 #side-nav-bar {
   display: flex;
+  grid-area: side-nav;
   border: 3px solid white;
-  height: 800px;
-  width: 20%;
   align-items: center;
 }
 
 .side-nav-links {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border: 3px solid white;
-  height: 100%;
-  padding-left: 0;
+  padding: 0;
+}
+
+.side-nav-links > li {
+  padding: 2em 0;
 }
 
 #about {
+  grid-area: about;
   border: 3px solid white;
   padding: 1.5em 0;
   text-align: justify;
@@ -102,6 +114,7 @@ button[name="shippuuden"] {
 }
 
 #episodes {
+  grid-area: episodes;
   border: 3px solid white;
   padding: 1.5em 0;
 }
@@ -142,6 +155,7 @@ button[name="shippuuden"] {
 }
 
 #characters {
+  grid-area: characters;
   border: 3px solid white;
   padding: 1.5em 0;
 }
@@ -157,6 +171,10 @@ button[name="shippuuden"] {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+
+#site-footer {
+  grid-area: footer;
 }
 
 .pic-note {
