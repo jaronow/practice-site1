@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Practice Site</title>
+    <title>World Of Naruto</title>
     <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="javascript/index.js" defer></script>
   </head>
   <body>
     <header id="site-header">
@@ -43,26 +44,29 @@
 
     <section id="episodes">
       <img src="images/naruto-vs-sasuke-by-epistafy-d3ldayt.jpg" alt="naruto vs sasuke">
-      <div class="series-episode-selection">
-        <h2>Select Series Episode List:</h2>
-        <div class="episode-selection-btn">
+      <h2 class="episode-list">Episode List</h2>
+      <div class="series-selection">
+        <h2>Select Series:</h2>
+        <div class="series-selection-btn">
           <button type="button" name="naruto">Naruto</button>
           <button type="button" name="shippuuden">Shippuuden</button>
         </div>
       </div>
-      <h2 class="naruto-episodes">Naruto Episode List</h2>
-      <ul class="naruto-table-buttons">
-        <button type="button" name="ns1-button">Season 1</button>
-        <button type="button" name="ns2-button">Season 2</button>
-        <button type="button" name="ns3-button">Season 3</button>
-        <button type="button" name="ns4-button">Season 4</button>
-        <button type="button" name="ns5-button">Season 5</button>
-        <button type="button" name="ns6-button">Season 6</button>
-        <button type="button" name="ns7-button">Season 7</button>
-        <button type="button" name="ns8-button">Season 8</button>
-        <button type="button" name="ns9-button">Season 9</button>
-        <button type="button" name="nm-button">Movies</button>
-      </ul>
+      <div id="naruto-episode-selection" class="naruto-episodes">
+        <h2 class="naruto-episodes">Naruto Episode List</h2>
+        <ul class="naruto-table-buttons">
+          <button type="button" name="ns1">Season 1</button>
+          <button type="button" name="ns2">Season 2</button>
+          <button type="button" name="ns3">Season 3</button>
+          <button type="button" name="ns4">Season 4</button>
+          <button type="button" name="ns5">Season 5</button>
+          <button type="button" name="ns6">Season 6</button>
+          <button type="button" name="ns7">Season 7</button>
+          <button type="button" name="ns8">Season 8</button>
+          <button type="button" name="ns9">Season 9</button>
+          <button type="button" name="nm">Movies</button>
+        </ul>
+      </div>
       <div class="naruto-season-1-table">
         <table>
           <caption>Season 1</caption>
@@ -96,6 +100,270 @@
           </tbody>
         </table>
       </div>
+      <div class="naruto-season-2-table">
+        <table>
+          <caption>Season 2</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>28</td>
+              <td>Eat or be Eaten: Panic in the Forest</td>
+            </tr>
+            <tr>
+              <td>29</td>
+              <td>Naruto's Counterattack: Never Give In!</td>
+            </tr>
+            <tr>
+              <td>30</td>
+              <td>The Sharingan Revived: Dragon-Flame Jutsu!</td>
+            </tr>
+            <tr>
+              <td>31</td>
+              <td>Bushy Brow's Pledge: Undying Love and Protection!</td>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>Sakura Blossoms!</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="naruto-season-3-table">
+        <table>
+          <caption>Season 3</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>54</td>
+              <td>The Summoning Jutsu: Wisdom of the Pervy Sage!</td>
+            </tr>
+            <tr>
+              <td>55</td>
+              <td>A Feeling of Yearning, A Flower Full of Hope</td>
+            </tr>
+            <tr>
+              <td>56</td>
+              <td>Live or Die: Risk it All to Win it All!</td>
+            </tr>
+            <tr>
+              <td>57</td>
+              <td>He Flies! He Jumps! He Lurks! Chief Toad Appears!</td>
+            </tr>
+            <tr>
+              <td>58</td>
+              <td>Hospital Besieged: The Evil Hand Revealed!</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="naruto-season-4-table">
+        <table>
+          <caption>Season 4</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>78</td>
+              <td>Naruto's Ninja Handbook</td>
+            </tr>
+            <tr>
+              <td>79</td>
+              <td>Beyond the Limit of Darkness and Light</td>
+            </tr>
+            <tr>
+              <td>80</td>
+              <td>The Third Hokage, Forever...</td>
+            </tr>
+            <tr>
+              <td>81</td>
+              <td>Return of the Morning Mist</td>
+            </tr>
+            <tr>
+              <td>82</td>
+              <td>Eye to Eye: Sharingan vs. Sharingan!</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="naruto-season-5-table">
+        <table>
+          <caption>Season 5</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>104</td>
+              <td>Run Idate Run! Nagi Island Awaits!</td>
+            </tr>
+            <tr>
+              <td>105</td>
+              <td>A Fierce Battle of Rolling Thunder!</td>
+            </tr>
+            <tr>
+              <td>106</td>
+              <td>The Last Leg: A Final Act of Desperation</td>
+            </tr>
+            <tr>
+              <td>107</td>
+              <td>The Battle Begins: Naruto vs. Sasuke</td>
+            </tr>
+            <tr>
+              <td>108</td>
+              <td>Bitter Rivals and Broken Bonds</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="naruto-season-6-table">
+        <table>
+          <caption>Season 6</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>129</td>
+              <td>Brothers: Distance Among the Uchiha</td>
+            </tr>
+            <tr>
+              <td>130</td>
+              <td>Father and Son, the Broken Crest</td>
+            </tr>
+            <tr>
+              <td>131</td>
+              <td>The Secrets of the Mangekyo Sharingan!</td>
+            </tr>
+            <tr>
+              <td>132</td>
+              <td>For a Friend</td>
+            </tr>
+            <tr>
+              <td>133</td>
+              <td>A Plea From a Friend</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="naruto-season-7-table">
+        <table>
+          <caption>Season 7</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>154</td>
+              <td>The Enemy of the Byakugan</td>
+            </tr>
+            <tr>
+              <td>155</td>
+              <td>The Dark Creeping Clouds</td>
+            </tr>
+            <tr>
+              <td>156</td>
+              <td>Raiga's Counterattack</td>
+            </tr>
+            <tr>
+              <td>157</td>
+              <td>Run! The Curry of Life</td>
+            </tr>
+            <tr>
+              <td>158</td>
+              <td>Follow My Lead! The Great Survival Challenge</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="naruto-season-8-table">
+        <table>
+          <caption>Season 8</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>179</td>
+              <td>The Remembered Lullaby</td>
+            </tr>
+            <tr>
+              <td>180</td>
+              <td>Hidden Jutsu: The Price of The Ninja Art: Kujaku</td>
+            </tr>
+            <tr>
+              <td>181</td>
+              <td>Hoshikage, The Buried Truth</td>
+            </tr>
+            <tr>
+              <td>182</td>
+              <td>Reunion, The Remaining time</td>
+            </tr>
+            <tr>
+              <td>183</td>
+              <td>The Star's Radiance</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="naruto-season-9-table">
+        <table>
+          <caption>Season 9</caption>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>203</td>
+              <td>Kurenai's Decision, Squad 8 Left Behind</td>
+            </tr>
+            <tr>
+              <td>204</td>
+              <td>Yakumo's Sealed Ability</td>
+            </tr>
+            <tr>
+              <td>205</td>
+              <td>Kurenai's Top-Secret Mission: The Promise With the Third Hokage</td>
+            </tr>
+            <tr>
+              <td>206</td>
+              <td>Genjutsu or Reality?</td>
+            </tr>
+            <tr>
+              <td>207</td>
+              <td>The Supposed Sealed Ability</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <div class="naruto-movies-table">
         <table>
           <caption>Movies</caption>
@@ -119,31 +387,33 @@
           </tbody>
         </table>
       </div>
-      <h2 class="shippuuden-episodes">Naruto Shippuden Episode List</h2>
-      <ul class="shippuuden-table-buttons">
-        <button type="button" name="ss1-button">Season 1</button>
-        <button type="button" name="ss2-button">Season 2</button>
-        <button type="button" name="ss3-button">Season 3</button>
-        <button type="button" name="ss4-button">Season 4</button>
-        <button type="button" name="ss5-button">Season 5</button>
-        <button type="button" name="ss6-button">Season 6</button>
-        <button type="button" name="ss7-button">Season 7</button>
-        <button type="button" name="ss8-button">Season 8</button>
-        <button type="button" name="ss9-button">Season 9</button>
-        <button type="button" name="ss10-button">Season 10</button>
-        <button type="button" name="ss11-button">Season 11</button>
-        <button type="button" name="ss12-button">Season 12</button>
-        <button type="button" name="ss13-button">Season 13</button>
-        <button type="button" name="ss14-button">Season 14</button>
-        <button type="button" name="ss15-button">Season 15</button>
-        <button type="button" name="ss16-button">Season 16</button>
-        <button type="button" name="ss17-button">Season 17</button>
-        <button type="button" name="ss18-button">Season 18</button>
-        <button type="button" name="ss19-button">Season 19</button>
-        <button type="button" name="ss20-button">Season 20</button>
-        <button type="button" name="ss21-button">Season 21</button>
-        <button type="button" name="ssm-button">Movies</button>
-      </ul>
+      <div id="shippuuden-episode-selection" class="shippuuden-episodes">
+        <h2 class="shippuuden-episodes">Naruto Shippuden Episode List</h2>
+        <ul class="shippuuden-table-buttons">
+          <button type="button" name="ss1">Season 1</button>
+          <button type="button" name="ss2">Season 2</button>
+          <button type="button" name="ss3">Season 3</button>
+          <button type="button" name="ss4">Season 4</button>
+          <button type="button" name="ss5">Season 5</button>
+          <button type="button" name="ss6">Season 6</button>
+          <button type="button" name="ss7">Season 7</button>
+          <button type="button" name="ss8">Season 8</button>
+          <button type="button" name="ss9">Season 9</button>
+          <button type="button" name="ss10">Season 10</button>
+          <button type="button" name="ss11">Season 11</button>
+          <button type="button" name="ss12">Season 12</button>
+          <button type="button" name="ss13">Season 13</button>
+          <button type="button" name="ss14">Season 14</button>
+          <button type="button" name="ss15">Season 15</button>
+          <button type="button" name="ss16">Season 16</button>
+          <button type="button" name="ss17">Season 17</button>
+          <button type="button" name="ss18">Season 18</button>
+          <button type="button" name="ss19">Season 19</button>
+          <button type="button" name="ss20">Season 20</button>
+          <button type="button" name="ss21">Season 21</button>
+          <button type="button" name="ssm">Movies</button>
+        </ul>
+      </div>
       <div class="shippuuden-season-1-table">
         <table>
           <caption>Season 1</caption>
@@ -231,7 +501,7 @@
     <footer id="site-footer">
       <p class="pic-note">**All Pictures came from <a href="https://www.deviantart.com" target="_blank">Deviant Art</a>**</p>
       <nav class="bottom-nav-bar">
-        <p class="foot-name"><a href="https://jaronow.github.io/my-site/">WA Web Designs</a><span class="copyright">&copy; 2019</span></p>
+        <p class="foot-name"><a href="https://jaronow.github.io/my-site/" target="_blank">WA Web Designs</a><span class="copyright">&copy; 2019</span></p>
       </nav>
     </footer>
   </body>

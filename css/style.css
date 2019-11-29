@@ -59,6 +59,18 @@ button[name="shippuuden"] {
   margin: 0 .75em;
 }
 
+button[name="naruto"]:hover,
+button[name="shippuuden"]:hover {
+  
+}
+
+div[class^="naruto-season-"],
+div[class^="shippuuden-season-"],
+div[class="naruto-movies-table"],
+div[class="shippuuden-movies-table"] {
+  display: none;
+}
+
 #site-header {
   display: flex;
   flex-grow: 1;
@@ -119,16 +131,25 @@ button[name="shippuuden"] {
   padding: 1.5em 0;
 }
 
-.series-episode-selection {
+.episode-list {
+  text-align: center;
+}
+
+.series-selection {
   display: flex;
   align-items: center;
 }
 
-.episode-selection-btn {
+.series-selection-btn {
   display: flex;
-  margin-left: auto;
+  margin-left: 18%;
   justify-content: center;
   align-items: center;
+}
+
+#naruto-episode-selection,
+#shippuuden-episode-selection {
+  display: none;
 }
 
 .naruto-episodes,
@@ -145,11 +166,11 @@ button[name="shippuuden"] {
   padding-left: 0;
 }
 
-.naruto-season-1-table,
-.naruto-movies-table,
-.shippuuden-season-1-table,
-.shippuuden-movies-table {
-  display: flex;
+div[class^="naruto-season-"],
+div[class="naruto-movies-table"],
+div[class^="shippuuden-season-"],
+div[class="shippuuden-movies-table"] {
+  display: none;
   justify-content: center;
   margin-top: 2em;
 }
