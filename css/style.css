@@ -59,9 +59,9 @@ button[name="shippuuden"] {
   margin: 0 .75em;
 }
 
-button[name="naruto"]:hover,
-button[name="shippuuden"]:hover {
-  
+button[name^="n"]:hover,
+button[name^="s"]:hover {
+  cursor: pointer;
 }
 
 div[class^="naruto-season-"],
@@ -163,7 +163,7 @@ div[class="shippuuden-movies-table"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-left: 0;
+  padding: 0 25px;
 }
 
 div[class^="naruto-season-"],
