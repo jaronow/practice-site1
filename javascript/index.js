@@ -153,7 +153,7 @@ function showItem(event) {
     document.querySelector('.naruto-season-8-table').style.display = 'none'
     document.querySelector('.naruto-movies-table').style.display = 'none'
     break;
-    case 'nm':
+    case 'nsm':
     document.querySelector('.naruto-movies-table').style.display = 'flex'
     document.querySelector('.naruto-season-1-table').style.display = 'none'
     document.querySelector('.naruto-season-2-table').style.display = 'none'

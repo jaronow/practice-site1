@@ -57,11 +57,26 @@ button[name="shippuuden"] {
   height: 3em;
   width: 8em;
   margin: 0 .75em;
+  background-color: rgb(36, 1, 92);
+  border: 2px solid rgb(36, 1, 92);
+  border-radius: 5%;
+  color: rgb(0, 247, 255);
+}
+
+button[name^="ns"],
+button[name^="ss"] {
+  margin: .25em;
+  padding: .25em .5em;
+  background-color: rgb(36, 1, 92);
+  border: 2px solid rgb(36, 1, 92);
+  border-radius: 5%;
+  color: rgb(0, 247, 255);
 }
 
 button[name^="n"]:hover,
 button[name^="s"]:hover {
   cursor: pointer;
+  background-color: rgb(101, 0, 184);
 }
 
 div[class^="naruto-season-"],
@@ -163,7 +178,6 @@ div[class="shippuuden-movies-table"] {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 25px;
 }
 
 div[class^="naruto-season-"],
