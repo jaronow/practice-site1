@@ -1,4 +1,6 @@
-module.exports = [
+Access-Control-Allow-Origin: *
+
+export default [
   {
     'Season 1': {
       1: 'Enter: Naruto Uzumaki',

@@ -1,5 +1,13 @@
+import narutoEpisodes from '../data/naruto-episodes.js'
+import shippuudenEpisodes from '../data/shippuuden-episodes.js'
+
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
 const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
+const seasonNum = document.getElementById('season-number')
+const seasonTable = document.getElementById('season-table')
+
+const seasonButtons = document.querySelectorAll('.episode-button')
+seasonButtons.forEach(button => button.addEventListener('click', showSeason))
 
 const seriesButtons = document.querySelectorAll('.series-button')
 seriesButtons.forEach(button => button.addEventListener('click', showSeries))
@@ -17,4 +25,9 @@ function showSeries() {
     default:
     return;
   }
+}
+
+function showSeason() {
+  console.log(this)
+  console.log(narutoEpisodes)
 }

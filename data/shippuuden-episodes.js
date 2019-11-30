@@ -1,4 +1,4 @@
-module.exports = [
+export default [
   {
     'Season 1': {
       1: 'Homecoming',
