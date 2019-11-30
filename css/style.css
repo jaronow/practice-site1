@@ -196,6 +196,7 @@ div[class="shippuuden-movies-table"] {
 .character-list-title {
   text-align: center;
   border-bottom: 1px dashed white;
+  padding-bottom: .75em;
 }
 
 .character-list {
@@ -204,6 +205,10 @@ div[class="shippuuden-movies-table"] {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+}
+
+.character-list > li {
+  padding: 0 .5em;
 }
 
 #site-footer {

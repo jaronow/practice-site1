@@ -1,8 +1,8 @@
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
 const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
 
-const buttons = document.querySelectorAll('.series-button')
-buttons.forEach(button => button.addEventListener('click', showSeries))
+const seriesButtons = document.querySelectorAll('.series-button')
+seriesButtons.forEach(button => button.addEventListener('click', showSeries))
 
 function showSeries() {
   switch(this.name) {
@@ -15,7 +15,6 @@ function showSeries() {
     narutoEpSelect.classList.remove('active-series')
     break;
     default:
-    lastSelectedTable = ''
     return;
   }
 }
