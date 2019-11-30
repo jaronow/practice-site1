@@ -1,0 +1,24 @@
+{
+  "name": "naruto-fan-site",
+  "version": "1.0.0",
+  "description": "Site dedicated to the great Naruto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaronow/practice-site1.git"
+  },
+  "keywords": [
+    "anime",
+    "naruto",
+    "shippuuden"
+  ],
+  "author": "Will Aronow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaronow/practice-site1/issues"
+  },
+  "homepage": "https://github.com/jaronow/practice-site1#readme"
+}

@@ -1,5 +1,3 @@
-Access-Control-Allow-Origin: *
-
 export default [
   {
     'Season 1': {

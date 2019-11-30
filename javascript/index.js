@@ -1,6 +1,8 @@
 import narutoEpisodes from '../data/naruto-episodes.js'
 import shippuudenEpisodes from '../data/shippuuden-episodes.js'
 
+console.log(narutoEpisodes)
+
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
 const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
 const seasonNum = document.getElementById('season-number')
@@ -29,5 +31,4 @@ function showSeries() {
 
 function showSeason() {
   console.log(this)
-  console.log(narutoEpisodes)
 }
