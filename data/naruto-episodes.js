@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     'Season 1': {
       1: 'Enter: Naruto Uzumaki',

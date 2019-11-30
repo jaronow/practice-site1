@@ -24,12 +24,17 @@ img[src="images/naruto-rasengan-by-kortrex-d7xblkk.jpg"] {
 }
 
 table {
-  border: 1px solid white;
   width: 75%;
+}
+
+caption {
+  padding-bottom: 1em;
+  font-size: 2em;
 }
 
 th {
   border-bottom: 1px solid black;
+  text-align: center;
 }
 
 td {
@@ -77,13 +82,6 @@ button[name^="n"]:hover,
 button[name^="s"]:hover {
   cursor: pointer;
   background-color: rgb(101, 0, 184);
-}
-
-div[class^="naruto-season-"],
-div[class^="shippuuden-season-"],
-div[class="naruto-movies-table"],
-div[class="shippuuden-movies-table"] {
-  display: none;
 }
 
 #site-header {
@@ -222,4 +220,12 @@ div[class="shippuuden-movies-table"] {
 
 .bottom-nav-bar {
   border-top: 5px solid white;
+}
+
+.active-series {
+  display: block !important;
+}
+
+.active-table {
+  display: flex;
 }
