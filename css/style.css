@@ -18,7 +18,7 @@ img {
   height: 520px;
 }
 
-img[src="images/naruto-rasengan-by-kortrex-d7xblkk.jpg"] {
+.main-pic {
   grid-area: main-pic;
   height: 1200px;
 }
@@ -178,10 +178,7 @@ button[name^="s"]:hover {
   justify-content: center;
 }
 
-div[class^="naruto-season-"],
-div[class="naruto-movies-table"],
-div[class^="shippuuden-season-"],
-div[class="shippuuden-movies-table"] {
+#season-table {
   display: none;
   justify-content: center;
   margin-top: 2em;
