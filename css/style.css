@@ -4,6 +4,7 @@ body {
   background: linear-gradient(to bottom, rgb(3, 13, 143), rgb(27, 129, 224));
   font-family: 'Oxygen', sans-serif;
   font-size: 1.15em;
+  grid-row-gap: 2em;
   grid-template:
     "header header header"
     "main-pic main-pic main-pic"
@@ -33,13 +34,14 @@ caption {
 }
 
 th {
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid black;
   text-align: center;
 }
 
 td {
+  text-align: center;
   margin-top: 10px;
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 a,
