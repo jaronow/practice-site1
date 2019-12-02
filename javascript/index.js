@@ -20,11 +20,13 @@ function showSeries() {
     narutoEpSelect.classList.add('active-series')
     shippuudenEpSelect.classList.remove('active-series')
     seasonTable.style.display = 'none'
+    tablePageSelect.style.display = 'none'
     break;
     case 'shippuuden':
     shippuudenEpSelect.classList.add('active-series')
     narutoEpSelect.classList.remove('active-series')
     seasonTable.style.display = 'none'
+    tablePageSelect.style.display = 'none'
     break;
     default:
     return;

@@ -8,18 +8,26 @@ body {
   grid-template:
     "header header header"
     "main-pic main-pic main-pic"
-    "side-nav about about"
-    "side-nav episodes episodes"
-    "side-nav characters characters"
+    "about-side-nav about about"
+    "episode-side-nav episodes episodes"
+    "character-jutsu-side-nav characters characters"
     "footer footer footer"
 }
 
 img {
-  width: 100%;
+  width: 95%;
   height: 520px;
+  margin: 0 auto;
 }
 
-.main-pic {
+.about-image,
+.episodes-image,
+.characters-image {
+  padding-left: 1.5em;
+}
+
+
+.main-image {
   grid-area: main-pic;
   height: 1200px;
 }
@@ -107,22 +115,20 @@ button[name^="p"]:hover {
   justify-content: space-around;
 }
 
-#side-nav-bar {
+#about-side-nav-bar {
   display: flex;
-  grid-area: side-nav;
-  border: 3px solid white;
-  align-items: center;
+  grid-area: about-side-nav;
+  align-items: flex-end;
 }
 
 .side-nav-links {
   display: flex;
   flex-direction: column;
-  border: 3px solid white;
-  padding: 0;
+  padding: 0 0 5em 0;
 }
 
 .side-nav-links > li {
-  padding: 2em 0;
+  padding: 1.5em 0;
 }
 
 #about {
@@ -132,11 +138,18 @@ button[name^="p"]:hover {
 }
 
 .about-text {
-  padding: 0 1.2em;
+  padding: 0 1.5em;
+  line-height: 1.5em
 }
 
 #about-title {
   text-align: center;
+}
+
+#episode-side-nav-bar {
+  display: flex;
+  grid-area: episode-side-nav;
+  align-items: flex-end;
 }
 
 #episodes {
@@ -151,11 +164,16 @@ button[name^="p"]:hover {
 .series-selection {
   display: flex;
   align-items: center;
+  border-bottom: 3px dashed white;
+}
+
+.series-selection-title {
+  padding-left: .75em
 }
 
 .series-selection-btn {
   display: flex;
-  margin-left: 18%;
+  margin-left: 16%;
   justify-content: center;
   align-items: center;
 }
@@ -176,6 +194,7 @@ button[name^="p"]:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: .5em 0;
 }
 
 #season-table {
@@ -204,7 +223,13 @@ button[name^="p"]:hover {
   color: rgb(0, 247, 255);
 }
 
-#characters {
+#character-jutsu-side-nav-bar {
+  display: flex;
+  grid-area: character-jutsu-side-nav;
+  align-items: flex-end;
+}
+
+#characters-jutsu {
   grid-area: characters;
   padding: 1.5em 0;
 }
@@ -215,16 +240,12 @@ button[name^="p"]:hover {
   padding-bottom: .75em;
 }
 
-.character-list {
+.character-jutsu-list {
   display: flex;
-  padding-left: 0;
+  padding: 0 2em 0 0;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
-}
-
-.character-list > li {
-  padding: 0 .5em;
 }
 
 #site-footer {
