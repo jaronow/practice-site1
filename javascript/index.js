@@ -6,6 +6,7 @@ const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection
 const tableTitle = document.getElementById('season-number')
 const seasonInfo = document.getElementById('season-info')
 const seasonTable = document.getElementById('season-table')
+const tablePageSelect = document.getElementById('page-selection')
 
 const seasonButtons = document.querySelectorAll('.episode-button')
 seasonButtons.forEach(button => button.addEventListener('click', showSeason))
@@ -39,189 +40,189 @@ function showSeason() {
     season = narutoEpisodes.map(season => {
       return season["Season 1"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns2':
     title = "Season 2"
     season = narutoEpisodes.map(season => {
       return season["Season 2"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns3':
     title = "Season 3"
     season = narutoEpisodes.map(season => {
       return season["Season 3"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns4':
     title = "Season 4"
     season = narutoEpisodes.map(season => {
       return season["Season 4"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns5':
     title = "Season 5"
     season = narutoEpisodes.map(season => {
       return season["Season 5"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns6':
     title = "Season 6"
     season = narutoEpisodes.map(season => {
       return season["Season 6"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns7':
     title = "Season 7"
     season = narutoEpisodes.map(season => {
       return season["Season 7"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns8':
     title = "Season 8"
     season = narutoEpisodes.map(season => {
       return season["Season 8"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ns9':
     title = "Season 9"
     season = narutoEpisodes.map(season => {
       return season["Season 9"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'nsm':
     title = "Movies"
     season = narutoEpisodes.map(season => {
       return season["Movies"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss1':
     title = "Season 1"
     season = shippuudenEpisodes.map(season => {
       return season["Season 1"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss2':
     title = "Season 2"
     season = shippuudenEpisodes.map(season => {
       return season["Season 2"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss3':
     title = "Season 3"
     season = shippuudenEpisodes.map(season => {
       return season["Season 3"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss4':
     title = "Season 4"
     season = shippuudenEpisodes.map(season => {
       return season["Season 4"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss5':
     title = "Season 5"
     season = shippuudenEpisodes.map(season => {
       return season["Season 5"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss6':
     title = "Season 6"
     season = shippuudenEpisodes.map(season => {
       return season["Season 6"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss7':
     title = "Season 7"
     season = shippuudenEpisodes.map(season => {
       return season["Season 7"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss8':
     title = "Season 8"
     season = shippuudenEpisodes.map(season => {
       return season["Season 8"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss9':
     title = "Season 9"
     season = shippuudenEpisodes.map(season => {
       return season["Season 9"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss10':
     title = "Season 10"
     season = shippuudenEpisodes.map(season => {
       return season["Season 10"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss11':
     title = "Season 11"
     season = shippuudenEpisodes.map(season => {
       return season["Season 11"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss12':
     title = "Season 12"
     season = shippuudenEpisodes.map(season => {
       return season["Season 12"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss13':
     title = "Season 13"
     season = shippuudenEpisodes.map(season => {
       return season["Season 13"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss14':
     title = "Season 14"
     season = shippuudenEpisodes.map(season => {
       return season["Season 14"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss15':
     title = "Season 15"
     season = shippuudenEpisodes.map(season => {
       return season["Season 15"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss16':
     title = "Season 16"
     season = shippuudenEpisodes.map(season => {
       return season["Season 16"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss17':
     title = "Season 17"
     season = shippuudenEpisodes.map(season => {
       return season["Season 17"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss18':
     title = "Season 18"
@@ -235,47 +236,106 @@ function showSeason() {
     season = shippuudenEpisodes.map(season => {
       return season["Season 19"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss20':
     title = "Season 20"
     season = shippuudenEpisodes.map(season => {
       return season["Season 20"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ss21':
     title = "Season 21"
     season = shippuudenEpisodes.map(season => {
       return season["Season 21"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
     case 'ssm':
     title = "Movies"
     season = shippuudenEpisodes.map(season => {
       return season["Movies"]
     })
-    createTable(title, season)
+    createSeason(title, season)
     break;
   }
 }
 
-function createTable(title, season) {
+let episodeNums = new Array()
+let episodeNames = new Array()
+let captionTitle = ''
+let episodeNumList = new Array()
+let episodeNameList = new Array()
+let currentPage = 1
+const numPerPage = 10
+let numOfPages = 1
+const currentPageInfo = document.getElementById('current-page')
+
+const pageButtons = document.querySelectorAll('.table-page')
+pageButtons.forEach(button => button.addEventListener('click', changePage))
+
+function createSeason(title, season) {
+  currentPage = 1
+  captionTitle = title
+  episodeNumList = Object.keys(season[0])
+  episodeNameList = Object.values(season[0])
+  getNumOfPages()
+}
+
+function getNumOfPages() {
+  numOfPages = Math.ceil(episodeNumList.length / numPerPage)
+  createEpisodeList()
+}
+
+function changePage() {
+  switch(this.name) {
+    case 'next': nextPage()
+    break;
+    case 'previous': previousPage()
+    break;
+  }
+}
+
+function nextPage() {
+  if (currentPage === numOfPages) {
+    return
+  }
+  currentPage += 1
+  createEpisodeList()
+}
+
+function previousPage() {
+  if (currentPage === 1) {
+    return
+  }
+  currentPage -= 1
+  createEpisodeList()
+}
+
+function createEpisodeList() {
+  const begin = ((currentPage - 1) * numPerPage)
+  const end = begin + numPerPage
+  episodeNums = episodeNumList.slice(begin, end)
+  episodeNames = episodeNameList.slice(begin, end)
+  createTable()
+}
+
+function createTable() {
   if (seasonInfo) {
     seasonInfo.innerHTML = ""
   }
-  let episodeInfo = Object.values(season[0])
-  let episodeNum = Object.keys(season[0])
-  tableTitle.innerHTML = title
-  for (let i = 0; i < episodeNum.length; i++) {
+  tableTitle.innerHTML = captionTitle
+  for (let i = 0; i < episodeNums.length; i++) {
     let row = seasonInfo.insertRow()
     let cell = row.insertCell()
     let cell2 = row.insertCell()
-    let numText = document.createTextNode(episodeNum[i])
-    let infoText = document.createTextNode(episodeInfo[i])
+    let numText = document.createTextNode(episodeNums[i])
+    let infoText = document.createTextNode(episodeNames[i])
     cell.appendChild(numText)
     cell2.appendChild(infoText)
   }
+  currentPageInfo.innerHTML = `Page ${currentPage} of ${numOfPages}`
   seasonTable.style.display = 'flex'
+  tablePageSelect.style.display = 'flex'
 }
