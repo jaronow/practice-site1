@@ -89,7 +89,6 @@ button[name^="s"]:hover {
 #site-header {
   display: flex;
   flex-grow: 1;
-  border: 3px solid white;
   align-items: center;
   grid-area: header;
 }
@@ -127,7 +126,6 @@ button[name^="s"]:hover {
 
 #about {
   grid-area: about;
-  border: 3px solid white;
   padding: 1.5em 0;
   text-align: justify;
 }
@@ -142,7 +140,6 @@ button[name^="s"]:hover {
 
 #episodes {
   grid-area: episodes;
-  border: 3px solid white;
   padding: 1.5em 0;
 }
 
@@ -188,7 +185,6 @@ button[name^="s"]:hover {
 
 #characters {
   grid-area: characters;
-  border: 3px solid white;
   padding: 1.5em 0;
 }
 
