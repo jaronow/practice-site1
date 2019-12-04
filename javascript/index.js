@@ -1,7 +1,7 @@
 import narutoEpisodes from '../data/naruto-episodes.js'
 import shippuudenEpisodes from '../data/shippuuden-episodes.js'
-import characterList from '../data/characters.js'
-import jutsuList from '../data/jutsu.js'
+import {characters} from '../data/characters.js'
+import {jutsu} from '../data/jutsu.js'
 
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
 const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
@@ -19,16 +19,16 @@ seriesButtons.forEach(button => button.addEventListener('click', showSeries))
 function showSeries() {
   switch(this.name) {
     case 'naruto':
-    narutoEpSelect.classList.add('active-series')
     shippuudenEpSelect.classList.remove('active-series')
     seasonTable.style.display = 'none'
     tablePageSelect.style.display = 'none'
+    narutoEpSelect.classList.add('active-series')
     break;
     case 'shippuuden':
-    shippuudenEpSelect.classList.add('active-series')
     narutoEpSelect.classList.remove('active-series')
     seasonTable.style.display = 'none'
     tablePageSelect.style.display = 'none'
+    shippuudenEpSelect.classList.add('active-series')
     break;
     default:
     return;
@@ -344,15 +344,35 @@ function createTable() {
   tablePageSelect.style.display = 'flex'
 }
 
+const villageSelection = document.querySelector('.village-selection')
+const jutsuSelection = document.querySelector('.jutsu-selection')
+
 const characterAndJutsuButtons = document.querySelectorAll('.character-jutsu-button')
 characterAndJutsuButtons.forEach(button => button.addEventListener('click', showMenu))
+
+const jutsuSelectionButtons = document.querySelectorAll('[name$=-jutsu]')
+jutsuSelectionButtons.forEach(button => button.addEventListener('click', showJutsuList))
+
+const villageSelectionButtons = document.querySelectorAll('[name$=-village]')
+villageSelectionButtons.forEach(button => button.addEventListener('click', showCharacterList))
 
 function showMenu() {
   switch(this.name){
     case 'jutsu':
+    villageSelection.classList.remove('characters-jutsu-active')
+    jutsuSelection.classList.add('characters-jutsu-active')
     break;
     case 'characters':
-    listName = 'Character List'
+    jutsuSelection.classList.remove('characters-jutsu-active')
+    villageSelection.classList.add('characters-jutsu-active')
     break;
   }
+}
+
+function showJutsuList() {
+  console.log(this)
+}
+
+function showCharacterList() {
+  console.log(this)
 }

@@ -295,7 +295,14 @@ button[name^="p"]:hover {
 }
 
 .jutsu-selection {
-  display: flex;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0
+}
+
+.village-selection {
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0
@@ -306,17 +313,6 @@ button[name^="p"]:hover {
   padding: 0 .25em;
 }
 
-.jutsu-active {
-  display: flex;
-}
-
-.village-selection {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0
-}
-
-.characters-active {
+.characters-jutsu-active {
   display: flex;
 }
