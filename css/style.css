@@ -293,3 +293,30 @@ button[name^="p"]:hover {
 .active-table {
   display: flex;
 }
+
+.jutsu-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0
+}
+
+.jutsu-selection > li,
+.village-selection > li {
+  padding: 0 .25em;
+}
+
+.jutsu-active {
+  display: flex;
+}
+
+.village-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0
+}
+
+.characters-active {
+  display: flex;
+}

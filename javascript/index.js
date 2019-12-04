@@ -1,5 +1,7 @@
 import narutoEpisodes from '../data/naruto-episodes.js'
 import shippuudenEpisodes from '../data/shippuuden-episodes.js'
+import characterList from '../data/characters.js'
+import jutsuList from '../data/jutsu.js'
 
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
 const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
@@ -340,4 +342,17 @@ function createTable() {
   currentPageInfo.innerHTML = `Page ${currentPage} of ${numOfPages}`
   seasonTable.style.display = 'flex'
   tablePageSelect.style.display = 'flex'
+}
+
+const characterAndJutsuButtons = document.querySelectorAll('.character-jutsu-button')
+characterAndJutsuButtons.forEach(button => button.addEventListener('click', showMenu))
+
+function showMenu() {
+  switch(this.name){
+    case 'jutsu':
+    break;
+    case 'characters':
+    listName = 'Character List'
+    break;
+  }
 }
