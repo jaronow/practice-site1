@@ -346,6 +346,7 @@ function createTable() {
 
 const villageSelection = document.querySelector('.village-selection')
 const jutsuSelection = document.querySelector('.jutsu-selection')
+const jutsuCharacterContainer = document.getElementById('character-jutsu-container')
 
 const characterAndJutsuButtons = document.querySelectorAll('.character-jutsu-button')
 characterAndJutsuButtons.forEach(button => button.addEventListener('click', showMenu))
@@ -370,9 +371,107 @@ function showMenu() {
 }
 
 function showJutsuList() {
-  console.log(this)
+  let jutsuList = ''
+  let jutsuTitle = ''
+  switch(this.name) {
+    case 'basic-jutsu':
+    jutsuTitle = 'Basic Jutsu'
+    jutsuList = jutsu['Basic Jutsu']
+    break;
+    case 's-jutsu':
+    jutsuTitle = 'S-Rank Jutsu'
+    jutsuList = jutsu['S-Rank Jutsu']
+    break;
+    case 'a-jutsu':
+    jutsuTitle = 'A-Rank Jutsu'
+    jutsuList = jutsu['A-Rank Jutsu']
+    break;
+    case 'b-jutsu':
+    jutsuTitle = 'B-Rank Jutsu'
+    jutsuList = jutsu['B-Rank Jutsu']
+    break;
+    case 'c-jutsu':
+    jutsuTitle = 'C-Rank Jutsu'
+    jutsuList = jutsu['C-Rank Jutsu']
+    break;
+    case 'd-jutsu':
+    jutsuTitle = 'D-Rank Jutsu'
+    jutsuList = jutsu['D-Rank Jutsu']
+    break;
+    case 'fire-jutsu':
+    jutsuTitle = 'Fire/Katon Jutsu'
+    jutsuList = jutsu['Katon - Fire']
+    break;
+    case 'wind-jutsu':
+    jutsuTitle = 'Wind/Fuuton Jutsu'
+    jutsuList = jutsu['Fuuton - Wind']
+    break;
+    case 'water-jutsu':
+    jutsuTitle = 'Water/Suiton Jutsu'
+    jutsuList = jutsu['Suiton - Water']
+    break;
+    case 'earth-jutsu':
+    jutsuTitle = 'Earth/Doton Jutsu'
+    jutsuList = jutsu['Doton - Earth']
+    break;
+    case 'lightening-jutsu':
+    jutsuTitle = 'Lightening/Raiton Jutsu'
+    jutsuList = jutsu['Raiton - Lightening']
+    break;
+    case 'blood-jutsu':
+    jutsuTitle = 'Blood Line/Kekkei Genkai Jutsu'
+    jutsuList = jutsu['Kekkei Genkai - Blood Line']
+    break;
+    case 'secret-jutsu':
+    jutsuTitle = 'Secret Clan Jutsu'
+    jutsuList = jutsu['Secret Clan Jutsu']
+    break;
+    case 'sage-jutsu':
+    jutsuTitle = 'Sage/Senjutsu Jutsu'
+    jutsuList = jutsu['Senjutsu - Sage']
+    break;
+  }
 }
 
 function showCharacterList() {
-  console.log(this)
+  let villageName = ''
+  let characterList = ''
+  switch(this.name) {
+    case 'leaf-village':
+    villageName = 'Hidden Leaf/Konohagakure'
+    characterList = characters['Konohagakure']
+    break;
+    case 'sand-village':
+    villageName = 'Hidden Sand/Sunagakure'
+    characterList = characters['Sunagakure']
+    break;
+    case 'cloud-village':
+    villageName = 'Hidden Cloud/Kumogakure'
+    characterList = characters['Kumogakure']
+    break;
+    case 'mist-village':
+    villageName = 'Hidden Mist/Kirigakure'
+    characterList = characters['Kirigakure']
+    break;
+    case 'rock-village':
+    villageName = 'Hidden Rock/Iwagakure'
+    characterList = characters['Iwagakure']
+    break;
+    case 'sound-village':
+    villageName = 'Hidden Sound/Otogakure'
+    characterList = characters['Otogakure']
+    break;
+    case 'rain-village':
+    villageName = 'Hidden Rain/Amegakure'
+    characterList = characters['Amegakure']
+    break;
+    case 'akatsuki-village':
+    villageName = 'Akatsuki'
+    characterList = characters['Akatsuki']
+    break;
+    case 'tail-village':
+    villageName = 'Tailed Beasts/Bijuu'
+    characterList = characters['Tailed Beasts']
+    break;
+  }
 }

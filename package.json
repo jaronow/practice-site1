@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/jaronow/practice-site1/issues"
   },
-  "homepage": "https://github.com/jaronow/practice-site1#readme"
+  "homepage": "https://github.com/jaronow/practice-site1#readme",
+  "dependencies": {
+    "handlebars": "^4.5.3",
+    "parcel-plugin-handlebars": "^0.4.4"
+  }
 }
