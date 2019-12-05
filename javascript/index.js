@@ -352,10 +352,10 @@ const characterAndJutsuButtons = document.querySelectorAll('.character-jutsu-but
 characterAndJutsuButtons.forEach(button => button.addEventListener('click', showMenu))
 
 const jutsuSelectionButtons = document.querySelectorAll('[name$=-jutsu]')
-jutsuSelectionButtons.forEach(button => button.addEventListener('click', showJutsuList))
+jutsuSelectionButtons.forEach(button => button.addEventListener('click', createJutsuList))
 
 const villageSelectionButtons = document.querySelectorAll('[name$=-village]')
-villageSelectionButtons.forEach(button => button.addEventListener('click', showCharacterList))
+villageSelectionButtons.forEach(button => button.addEventListener('click', createCharacterList))
 
 function showMenu() {
   switch(this.name){
@@ -370,7 +370,7 @@ function showMenu() {
   }
 }
 
-function showJutsuList() {
+function createJutsuList() {
   let jutsuList = ''
   let jutsuTitle = ''
   switch(this.name) {
@@ -433,7 +433,7 @@ function showJutsuList() {
   }
 }
 
-function showCharacterList() {
+function createCharacterList() {
   let villageName = ''
   let characterList = ''
   switch(this.name) {
