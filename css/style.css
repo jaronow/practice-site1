@@ -95,6 +95,14 @@ button[name^="p"]:hover {
   background-color: rgb(101, 0, 184);
 }
 
+button[name$="-jutsu"],
+button[name$="-village"] {
+  background-color: rgb(36, 1, 92);
+  border: 2px solid rgb(36, 1, 92);
+  border-radius: 5%;
+  color: rgb(0, 247, 255)
+}
+
 #site-header {
   display: flex;
   flex-grow: 1;

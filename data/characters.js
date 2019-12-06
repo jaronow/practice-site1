@@ -4,7 +4,7 @@ export const characters = {
       'name': 'Kakashi Hatake',
       'team': 'Team 7',
       'rank': 'Jonin',
-      'image': ''
+      'image': '../images/Kakashi.jpg'
     },
     {
       'name': 'Naruto Uzumaki',
@@ -380,7 +380,7 @@ export const characters = {
       'name': 'Itachi Uchiha',
       'team': '',
       'rank': '',
-      'image': ''
+      'image': 'Itachi-Uchiha.jpg'
     },
     {
       'name': 'Deidara',
@@ -840,7 +840,7 @@ export const characters = {
       'name': 'Kurama',
       'team': '',
       'rank': 'Nine-Tails',
-      'image': ''
+      'image': 'Kurama.jpg'
     }
   ],
   'Otogakure': [

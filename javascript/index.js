@@ -2,8 +2,9 @@ import narutoEpisodes from '../data/naruto-episodes.js'
 import shippuudenEpisodes from '../data/shippuuden-episodes.js'
 import {characters} from '../data/characters.js'
 import {jutsu} from '../data/jutsu.js'
+import jutsuTemplate from './jutsu-template.hbs'
+import characterTemplate from './character-template'
 
-const Handlebars = require('handlebars')
 
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
 const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
@@ -507,17 +508,11 @@ function createCharacterList() {
 }
 
 function createJutsuTemplate(title, list) {
-  const jutsuTemplate = document.getElementById('jutsu-template').innerHTML
-  const compiledTemplate = Handlebars.compile(jutsuTemplate)
-  const jutsuHTML = compiledTemplate(list)
   jutsuCharacterTitle.innerHTML = title
-  jutsuCharacterContainer.innerHTML = jutsuHTML
+  jutsuCharacterContainer.innerHTML = jutsuTemplate(list)
 }
 
 function createCharacterTemplate(village, characters) {
-  const characterTemplate = document.getElementById('character-template').innerHTML
-  const compiledTemplate = Handlebars.compile(characterTemplate)
-  const characterHTML = compiledTemplate(characters)
   jutsuCharacterTitle.innerHTML = village
-  jutsuCharacterContainer.innerHTML = characterHTML
+  jutsuCharacterContainer.innerHTML = characterTemplate(characters)
 }

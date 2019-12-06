@@ -1,0 +1,15 @@
+{{#each this}}
+<div class="characters">
+  {{#if image}}
+  <div class="character-image">
+    <img src="{{image}}" alt="picture of {{name}}">
+  </div>
+  {{/if}}
+  <div class="character-info">
+    <h3>{{name}} {{#if rank}} <span class="rank">({{rank}})</span></h3>{{/if}}
+    {{#if team}}
+    <p>Team: {{team}}</p>
+    {{/if}}
+  </div>
+</div>
+{{/each}}

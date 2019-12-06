@@ -179,34 +179,7 @@
       <div id="character-jutsu-container">
       </div>
     </section>
-
-    <script id="jutsu-template" type="text/x-handlebars-template">
-      {{#each this}}
-      <div class="jutsu">
-        <h3 class="jutsu-info">{{this.name}}</h3>
-        <p class="jutsu-info">{{this.description}}</p>
-      </div>
-      {{/each}}
-    </script>
-
-    <script id="character-template" type="text/x-handlebars-template">
-      {{#each this}}
-      <div class="characters">
-        {{#if image}}
-        <div class="character-image">
-          <img src="{{image}}" alt="picture of {{name}}">
-        </div>
-        {{/if}}
-        <div class="character-info">
-          <h3>{{name}} {{#if rank}} <span class="rank">({{rank}})</span></h3>{{/if}}
-          {{#if team}}
-          <p>Team: {{team}}</p>
-          {{/if}}
-        </div>
-      </div>
-      {{/each}}
-    </script>
-
+    
     <footer id="site-footer">
       <p class="pic-note">**All Pictures came from <a href="https://www.deviantart.com" target="_blank">Deviant Art</a>**</p>
       <nav class="bottom-nav-bar">

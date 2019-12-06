@@ -21,10 +21,9 @@
     "url": "https://github.com/jaronow/practice-site1/issues"
   },
   "homepage": "https://github.com/jaronow/practice-site1#readme",
-  "dependencies": {
-    "handlebars": "^4.5.3"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "handlebars": "^4.5.3",
     "parcel-plugin-handlebars-precompile": "^1.0.1"
   }
 }
