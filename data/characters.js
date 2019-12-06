@@ -10,7 +10,7 @@ export const characters = {
       'name': 'Naruto Uzumaki',
       'team': 'Team 7',
       'rank': 'Genin',
-      'image': ''
+      'image': 'naruto.jpg'
     },
     {
       'name': 'Sasuke Uchiha',

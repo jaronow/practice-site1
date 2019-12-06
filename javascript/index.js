@@ -3,6 +3,8 @@ import shippuudenEpisodes from '../data/shippuuden-episodes.js'
 import {characters} from '../data/characters.js'
 import {jutsu} from '../data/jutsu.js'
 
+const Handlebars = require('handlebars')
+
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
 const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
 const tableTitle = document.getElementById('season-number')
@@ -347,6 +349,7 @@ function createTable() {
 const villageSelection = document.querySelector('.village-selection')
 const jutsuSelection = document.querySelector('.jutsu-selection')
 const jutsuCharacterContainer = document.getElementById('character-jutsu-container')
+const jutsuCharacterTitle = document.getElementById('character-jutsu-container-title')
 
 const characterAndJutsuButtons = document.querySelectorAll('.character-jutsu-button')
 characterAndJutsuButtons.forEach(button => button.addEventListener('click', showMenu))
@@ -360,10 +363,14 @@ villageSelectionButtons.forEach(button => button.addEventListener('click', creat
 function showMenu() {
   switch(this.name){
     case 'jutsu':
+    jutsuCharacterContainer.innerHTML = ''
+    jutsuCharacterTitle.innerHTML = ''
     villageSelection.classList.remove('characters-jutsu-active')
     jutsuSelection.classList.add('characters-jutsu-active')
     break;
     case 'characters':
+    jutsuCharacterContainer.innerHTML = ''
+    jutsuCharacterTitle.innerHTML = ''
     jutsuSelection.classList.remove('characters-jutsu-active')
     villageSelection.classList.add('characters-jutsu-active')
     break;
@@ -377,58 +384,72 @@ function createJutsuList() {
     case 'basic-jutsu':
     jutsuTitle = 'Basic Jutsu'
     jutsuList = jutsu['Basic Jutsu']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 's-jutsu':
     jutsuTitle = 'S-Rank Jutsu'
     jutsuList = jutsu['S-Rank Jutsu']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'a-jutsu':
     jutsuTitle = 'A-Rank Jutsu'
     jutsuList = jutsu['A-Rank Jutsu']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'b-jutsu':
     jutsuTitle = 'B-Rank Jutsu'
     jutsuList = jutsu['B-Rank Jutsu']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'c-jutsu':
     jutsuTitle = 'C-Rank Jutsu'
     jutsuList = jutsu['C-Rank Jutsu']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'd-jutsu':
     jutsuTitle = 'D-Rank Jutsu'
     jutsuList = jutsu['D-Rank Jutsu']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'fire-jutsu':
     jutsuTitle = 'Fire/Katon Jutsu'
     jutsuList = jutsu['Katon - Fire']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'wind-jutsu':
     jutsuTitle = 'Wind/Fuuton Jutsu'
     jutsuList = jutsu['Fuuton - Wind']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'water-jutsu':
     jutsuTitle = 'Water/Suiton Jutsu'
     jutsuList = jutsu['Suiton - Water']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'earth-jutsu':
     jutsuTitle = 'Earth/Doton Jutsu'
     jutsuList = jutsu['Doton - Earth']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'lightening-jutsu':
     jutsuTitle = 'Lightening/Raiton Jutsu'
     jutsuList = jutsu['Raiton - Lightening']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'blood-jutsu':
     jutsuTitle = 'Blood Line/Kekkei Genkai Jutsu'
     jutsuList = jutsu['Kekkei Genkai - Blood Line']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'secret-jutsu':
     jutsuTitle = 'Secret Clan Jutsu'
     jutsuList = jutsu['Secret Clan Jutsu']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
     case 'sage-jutsu':
     jutsuTitle = 'Sage/Senjutsu Jutsu'
     jutsuList = jutsu['Senjutsu - Sage']
+    createJutsuTemplate(jutsuTitle, jutsuList)
     break;
   }
 }
@@ -440,38 +461,63 @@ function createCharacterList() {
     case 'leaf-village':
     villageName = 'Hidden Leaf/Konohagakure'
     characterList = characters['Konohagakure']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'sand-village':
     villageName = 'Hidden Sand/Sunagakure'
     characterList = characters['Sunagakure']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'cloud-village':
     villageName = 'Hidden Cloud/Kumogakure'
     characterList = characters['Kumogakure']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'mist-village':
     villageName = 'Hidden Mist/Kirigakure'
     characterList = characters['Kirigakure']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'rock-village':
     villageName = 'Hidden Rock/Iwagakure'
     characterList = characters['Iwagakure']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'sound-village':
     villageName = 'Hidden Sound/Otogakure'
     characterList = characters['Otogakure']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'rain-village':
     villageName = 'Hidden Rain/Amegakure'
     characterList = characters['Amegakure']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'akatsuki-village':
     villageName = 'Akatsuki'
     characterList = characters['Akatsuki']
+    createCharacterTemplate(villageName, characterList)
     break;
     case 'tail-village':
     villageName = 'Tailed Beasts/Bijuu'
     characterList = characters['Tailed Beasts']
+    createCharacterTemplate(villageName, characterList)
     break;
   }
+}
+
+function createJutsuTemplate(title, list) {
+  const jutsuTemplate = document.getElementById('jutsu-template').innerHTML
+  const compiledTemplate = Handlebars.compile(jutsuTemplate)
+  const jutsuHTML = compiledTemplate(list)
+  jutsuCharacterTitle.innerHTML = title
+  jutsuCharacterContainer.innerHTML = jutsuHTML
+}
+
+function createCharacterTemplate(village, characters) {
+  const characterTemplate = document.getElementById('character-template').innerHTML
+  const compiledTemplate = Handlebars.compile(characterTemplate)
+  const characterHTML = compiledTemplate(characters)
+  jutsuCharacterTitle.innerHTML = village
+  jutsuCharacterContainer.innerHTML = characterHTML
 }

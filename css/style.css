@@ -141,7 +141,7 @@ button[name^="p"]:hover {
 
 .about-text {
   padding: 0 1.5em;
-  line-height: 1.5em
+  line-height: 1.5em;
 }
 
 #about-title {
@@ -315,4 +315,40 @@ button[name^="p"]:hover {
 
 .characters-jutsu-active {
   display: flex;
+}
+
+#character-jutsu-container-title {
+  text-align: center;
+}
+
+#character-jutsu-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.jutsu {
+  width: 15em;
+  height: 20em;
+  margin: .5em 0;
+  padding: 0 .25em;
+  border: 3px solid white;
+}
+
+.jutsu-info {
+  display: inline-flex;
+  padding-top: 1em;
+}
+
+.characters {
+  border: 3px solid white;
+  width: 15em;
+  height: 10em;
+}
+
+.rank {
+  font-size: .75em;
 }
