@@ -2,9 +2,9 @@ import {narutoEpisodes} from '../data/naruto-episodes.js'
 import {shippuudenEpisodes} from '../data/shippuuden-episodes.js'
 import {characters} from '../data/characters.js'
 import {jutsu} from '../data/jutsu.js'
-import jutsuTemplate from './jutsu-template.hbs'
-import characterTemplate from './character-template.hbs'
-import episodeTempate from './episode-template.hbs'
+import jutsuTemplate from './templates/jutsu-template.hbs'
+import characterTemplate from './templates/character-template.hbs'
+import episodeTempate from './templates/episode-template.hbs'
 
 
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
@@ -32,8 +32,6 @@ function showSeries() {
     seasonTable.innerHTML = ''
     shippuudenEpSelect.classList.add('active-series')
     break;
-    default:
-    return;
   }
 }
 
