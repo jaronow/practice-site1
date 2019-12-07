@@ -1,556 +1,2078 @@
-export default [
-  {
-    'Season 1': {
-      1: 'Homecoming',
-      2: 'The Akatsuki Makes Its Move',
-      3: 'The Results Of Training',
-      4: 'The Jinchuriki Of The Sand',
-      5: 'The Kazekage Stands Tall',
-      6: 'Mission Cleared',
-      7: 'Run, Kankuro',
-      8: 'Team Kakashi, Deployed',
-      9: "The Jinchuriki's Tears",
-      10: 'Sealing Technique: Phantom Dragons Nine Consuming Seals',
-      11: "The Medical Ninja's Student",
-      12: "The Retired Granny's Determination",
-      13: 'A Meeting With Destiny',
-      14: "Naruto's Growth",
-      15: 'The Secret Weapon is Called....',
-      16: 'The Secret of Jinchuriki',
-      17: 'The Death of Gaara!',
-      18: 'Charge Tactic! Button Hook Entry!!',
-      19: "Traps Activate! Team Guy's Enemy",
-      20: 'Hiruko vs. Two Kunoichi!',
-      21: "Sasori's Real Face",
-      22: "Chiyo's Secret Skills",
-      23: 'Father and Mother',
-      24: 'The Third Kazekage',
-      25: 'Three Minutes Between Life and Death',
-      26: 'Puppet Fight: 10 vs. 100!',
-      27: 'Impossible Dream',
-      28: 'Beasts: Alive Again!',
-      29: 'Kakashi Enlightened!',
-      30: 'Aesthetics of an Instant',
-      31: 'The Legacy',
-      32: 'Return of the Kazekage'
+export const shippuudenEpisodes = {
+  'Season 1': [
+    {
+      'episode': 1,
+      'title': 'Homecoming'
     },
-    'Season 2': {
-      33: 'The New Target',
-      34: 'Formation! New Team Kakashi!',
-      35: 'An Unnecessary Addition',
-      36: 'The Fake Smile',
-      37: 'Untitled',
-      38: 'Simulation',
-      39: 'The Tenchi Bridge',
-      40: 'The Nine-Tails Unleashed',
-      41: 'The Top-Secret Mission Begins',
-      42: 'Orochimaru vs. Jinchuriki',
-      43: "Sakura's Tears",
-      44: 'The Secret of the Battle!',
-      45: 'The Consequences of Betrayal',
-      46: 'The Unfinished Page',
-      47: 'Infiltration: The Den of the Snake!',
-      48: 'Bonds',
-      49: 'Something Important...',
-      50: "The Picture Book's Story",
-      51: 'Reunion',
-      52: 'The Power of Uchiha',
-      53: 'Title'
+    {
+      'episode': 2,
+      'title': 'The Akatsuki Makes Its Move'
     },
-    'Season 3': {
-      54: 'Nightmare',
-      55: 'Wind',
-      56: 'Writhe',
-      57: 'Deprived of Eternal Sleep',
-      58: 'Loneliness',
-      59: 'A New Enemy',
-      60: 'Impermanence',
-      61: 'Contact',
-      62: 'Teammate',
-      63: 'The Two Kings',
-      64: 'Jet Black Signal Fire',
-      65: 'Lockdown of Darkness',
-      66: 'Revived Souls',
-      67: "Everyone's Struggle to the Death",
-      68: 'Moment of Awakening',
-      69: 'Despair',
-      70: 'Resonance',
-      71: 'My Friend'
+    {
+      'episode': 3,
+      'title': 'The Results Of Training'
     },
-    'Season 4': {
-      72: 'The Quietly Approaching Threat',
-      73: "Akatsuki's Invasion",
-      74: 'Under the Starry Sky"',
-      75: "The Old Monk's Prayer",
-      76: 'The Next Step',
-      77: 'Climbing Silver',
-      78: 'The Judgment',
-      79: 'Unfulfilled Scream',
-      80: 'Last Words',
-      81: 'Sad News',
-      82: 'Team Ten',
-      83: 'Target: Locked On',
-      84: "Kakuzu's Abilities",
-      85: 'The Terrifying Secret',
-      86: "Shikamaru's Genius",
-      87: 'When You Curse Someone, You Dig Your Own Grave',
-      88: 'Wind Style: Rasen Shuriken!'
+    {
+      'episode': 4,
+      'title': 'The Jinchuriki Of The Sand'
     },
-    'Season 5': {
-      89: 'The Price of Power',
-      90: "A Shinobi's Determination",
-      91: "Orochimaru's Hideout Discovered",
-      92: "Encounter",
-      93: "Connecting Hearts",
-      94: "A Night of Rain",
-      95: "The Two Charms",
-      96: "The Unseeing Enemy",
-      97: "The Labyrinth of Distorted Reflection",
-      98: "The Target Appears",
-      99: "The Rampaging Tailed Beast",
-      100: "Inside the Mist",
-      101: "Everyone's Feelings",
-      102: "Regroup!",
-      103: "The Four-Corner Sealing Barrier",
-      104: "Breaking the Crystal Style",
-      105: 	"The Battle Over the Barrier",
-      106: "Red Camellia",
-      107: "Strange Bedfellows",
-      108: "Guidepost of the Camellia",
-      109: "Counterattack of the Curse Mark",
-      110: "Memory of Guilt",
-      111: "Shattered Promise",
-      112: "A Place to Return To"
+    {
+      'episode': 5,
+      'title': 'The Kazekage Stands Tall'
     },
-    'Season 6': {
-      113: "The Serpent's Pupil",
-      114: "Eye of the Hawk",
-      115: "Zabuza's Blade",
-      116: "Guardian of the Iron Wall",
-      117: "Jugo of the North Hideout",
-      118: "Formation!",
-      119: "Kakashi Chronicles ~ Boys' Life on the Battlefield ~ Part 1",
-      120: "Kakashi Chronicles ~ Boys' Life on the Battlefield ~ Part 2",
-      121: "Assemble",
-      122: "The Hunt",
-      123: "Clash!",
-      124: "Art",
-      125: "Disappearance",
-      126: "Twilight",
-      127: "Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 1",
-      128: "Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 2",
-      129: "Infiltrate! The Village Hidden in the Rain",
-      130: "The Man Who Became God",
-      131: "Honored Sage Mode!",
-      132: "In Attendance, the Six Paths of Pain",
-      133: "The Tale of Jiraiya the Gallant",
-      134: "Banquet Invitation",
-      135: "The Longest Moment",
-      136: "The Light & Dark of the Mangekyo Sharingan",
-      137: "Amaterasu!",
-      138: "The End",
-      139: "The Mystery of Tobi",
-      140: "Fate",
-      141: "Truth",
-      142: "Battle of Unraikyo",
-      143: "The Eight-Tails vs. Sasuke"
+    {
+      'episode': 6,
+      'title': 'Mission Cleared'
     },
-    'Season 7': {
-      144: "Wanderer",
-      145: "Successor of the Forbidden Jutsu",
-      146: "The Successor's Wish",
-      147: "Rogue Ninja's Past",
-      148: "Heir to Darkness",
-      149: "Parting",
-      150: "The Forbidden Jutsu Released",
-      151: "Master and Student",
+    {
+      'episode': 7,
+      'title': 'Run, Kankuro'
     },
-    'Season 8': {
-      152: "Somber News",
-      153: "Following the Master's Shadow",
-      154: "Decryption",
-      155: "The First Challenge",
-      156: "Surpassing the Master",
-      157: "Assault on the Leaf Village!",
-      158: "Power to Believe",
-      159: "Pain vs. Kakashi",
-      160: "Mystery of Pain",
-      161: "Surname Is Sarutobi. Given Name, Konohamaru!",
-      162: "Pain to the World",
-      163: "Explode! Sage Mode",
-      164: "Danger! Sage Mode Limit Reached",
-      165: "Nine-Tails, Captured!",
-      166: "Confessions",
-      167: "Planetary Devastation",
-      168: "The Fourth Hokage",
-      169: "The Two Students",
-      170: "Big Adventure! The Quest for the Fourth Hokage's Legacy - Part 1",
-      171: "Big Adventure! The Quest for the Fourth Hokage's Legacy - Part 2",
-      172: "Meeting",
-      173: "Origin of Pain",
-      174: "Tale of Naruto Uzumaki",
-      175: "Hero of the Leaf"
+    {
+      'episode': 8,
+      'title': 'Team Kakashi, Deployed'
     },
-    'Season 9': {
-      176: "Rookie Instructor Iruka",
-      177: "Iruka's Ordeal",
-      178: "Iruka's Decision",
-      179: "Kakashi Hatake, The Jonin in Charge",
-      180: "Inari's Courage Put to the Test",
-      181: "Naruto's School of Revenge",
-      182: "Gaara's Bond",
-      183: "Naruto: Outbreak",
-      184: "Deploy! Team Tenten",
-      185: "Animal District",
-      186: "Ah, the Medicine of Youth",
-      187: "Gutsy Master and Student: The Training",
-      188: "Record of the Ninja Gutsy Master and Student",
-      189: "Sasuke's Paw Encyclopedia",
-      190: "Naruto and the Old Soldier",
-      191: "Kakashi Love Song",
-      192: "Neji Chronicles",
-      193: "The Man Who Died Twice",
-      194: "The Worst Three-Legged Race",
-      195: "Team 10's Teamwork",
-      196: "Drive Towards Darkness"
+    {
+      'episode': 9,
+      'title': 'The Jinchuriki\'s Tears'
     },
-    'Season 10': {
-      197: "The Sixth Hokage Danzo",
-      198: "Five Kage Summit's Eve",
-      199: "Enter the Five Kage!",
-      200: "Naruto's Plea",
-      201: "Painful Decision",
-      202: "Racing Lightning",
-      203: "Sasuke's Ninja Way",
-      204: "Power of the Five Kage",
-      205: "Declaration of War",
-      206: "Sakura's Feelings",
-      207: "The Tailed Beast vs. The Tailless Tailed Beast",
-      208: "As One's Friend",
-      209: "Danzo's Right Arm",
-      210: "The Forbidden Visual Jutsu",
-      211: "Danzo Shimura",
-      212: "Sakura's Resolve",
-      213: "Lost Bonds",
-      214: "The Burden",
-      215: "Two Fates",
-      216: "High-Level Shinobi",
-      217: "The Infiltrator",
-      218: 	"The Five Great Nations Mobilize",
-      219: "Kakashi Hatake, the Hokage",
-      220: "Prophecy of the Great Lord Elder",
-      221: "Storage"
+    {
+      'episode': 10,
+      'title': 'Sealing Technique: Phantom Dragons Nine Consuming Seals'
     },
-    'Season 11': {
-      222: "The Five Kage's Decision",
-      223: "The Young Man and the Sea",
-      224: "The Ninja of Benisu",
-      225: "The Cursed Ghost Ship",
-      226: "Battleship Island",
-      227: "The Forgotten Island",
-      228: "Fight! Rock Lee!",
-      229: "Eat or Die! Mushrooms from Hell!",
-      230: "Revenge of the Shadow Clones",
-      231: "The Closed Route",
-      232: "The Girls' Get-Together",
-      233: "Naruto's Imposter",
-      234: "Naruto's Favorite Pupil",
-      235: "The Kunoichi of Nadeshiko Village",
-      236: "Friends You Can Count On",
-      237: "Ah, My Hero Lady Tsunade!",
-      238: "Sai's Day Off",
-      239: "The Legendary Ino-Shika-Cho",
-      240: "Kiba's Determination",
-      241: "Kakashi, My Eternal Rival!",
-      242: "Naruto's Vow"
+    {
+      'episode': 11,
+      'title':'The Medical Ninja\'s Student'
     },
-    'Season 12': {
-      243: "Land Ahoy! Is this the Paradise Island?",
-      244: "Killer Bee and Motoi",
-      245: "The Next Challenge! Naruto vs. The Nine Tails",
-      246: "The Orange Spark",
-      247: "Target: Nine Tails",
-      248: "The Fourth Hokage's Death Match!",
-      249: "Thank You",
-      250: "Battle in Paradise! Odd Beast vs. The Monster!",
-      251: "The Man Named Kisame",
-      252: "The Angelic Herald of Death",
-      253: "The Bridge to Peace",
-      254: "The Super Secret S-Rank Mission",
-      255: "The Artist Returns",
-      256: "Assemble! Allied Shinobi Forces!",
-      257: "Meeting",
-      258: "Rivals",
-      259: "Rift",
-      260: "Parting",
-      261: "For My Friend",
-      262: "War Begins",
-      263: "Sai And Shin",
-      264: "Secrets of the Reanimation Jutsu",
-      265: "An Old Nemesis Returns",
-      266: "The First and Last Opponent",
-      267: 	"The Brilliant Military Advisor of the Hidden Leaf",
-      268: "Battleground!",
-      269: "Forbidden Words",
-      270: "Golden Bonds",
-      271: "Road to Sakura",
-      272: "Mifune vs. Hanzo",
-      273: "True Kindness",
-      274: "The Complete Ino-Shika-Cho Formation!",
-      275: "A Message from the Heart"
+    {
+      'episode': 12,
+      'title': 'The Retired Granny\'s Determination'
     },
-    'Season 13': {
-      276: "Attack of the Gedo Statue",
-      277: "Unison Sign",
-      278: "Medic Ninja in Danger",
-      279: "White Zetsu's Trap",
-      280: "Aesthetics of an Artist",
-      281: "The Allied Mom Force!!",
-      282: "The Secret Origin of the Ultimate Tag Team!",
-      283: "Two Suns",
-      284: "The Helmet Splitter: Jinin Akebino!",
-      285: "User of the Scorch Style: Pakura of the Sand!",
-      286: "Things You Can't Get Back",
-      287: "One Worth Betting On",
-      288: "Danger: Jinpachi and Kushimaru!",
-      289: "The Lightning Blade: Ameyuri Ringo!",
-      290: "Power - Episode 1",
-      291: "Power - Episode 2",
-      292: "Power - Episode 3",
-      293: "Power - Episode 4",
-      294: "Power - Episode 5",
-      295: "Power - Final Episode"
+    {
+      'episode': 13,
+      'title': 'A Meeting With Destiny'
     },
-    'Season 14': {
-      296: "Naruto Enters the Battle!",
-      297: "A Father's Hope, A Mother's Love",
-      298: "Contact! Naruto vs. Itachi",
-      299: "The Acknowledged One",
-      300: "The Mizukage, the Giant Clam, and the Mirage",
-      301: "Paradox",
-      302: "Terror: The Steam Imp",
-      303: "Ghosts from the Past",
-      304: "The Underworld Transfer Jutsu",
-      305: "The Vengeful",
-      306: "The Heart's Eye",
-      307: "Fade into the Moonlight",
-      308: "Crescent Moonlight",
-      309: "The A-Rank Mission: Food Fight",
-      310: "The Fallen Castle",
-      311: "Prologue of Road to Ninja",
-      312: "The Old Master and the Dragon's Eye",
-      313: "Rain Followed by Snow, with Some Lightning",
-      314: "The Sad Sun Shower",
-      315: "Lingering Snow",
-      316: "The Reanimated Allied Forces",
-      317: "Shino vs. Torune!",
-      318: "A Hole in the Heart: The Other Jinchuriki",
-      319: "The Soul Living Inside the Puppet",
-      320: "Run, Omoi!"
+    {
+      'episode': 14,
+      'title': 'Naruto\'s Growth'
     },
-    'Season 15': {
-      321: "Reinforcements Arrive",
-      322: "Madara Uchiha",
-      323: "The Five Kage Assemble",
-      324: "The Unbreakable Mask and the Shattered Bubble",
-      325: "Jinchūriki vs. Jinchūriki!!",
-      326: "Four Tails, the King of Sage Monkeys",
-      327: "Nine Tails",
-      328: "Kurama",
-      329: "Two-Man Team",
-      330: "The Promise of Victory",
-      331: "Eyes That See in the Dark",
-      332: "A Will of Stone",
-      333: "The Risks of the Reanimation Jutsu",
-      334: "Sibling Tag Team",
-      335: "To Each Their Own Leaf",
-      336: "Kabuto Yakushi",
-      337: "The Izanami Activated",
-      338: "Izanagi and Izanami",
-      339: "I Will Love You Always",
-      340: "Reanimation Jutsu: Release!",
-      341: "Orochimaru's Return",
-      342: "The Secret of the Transportation Technique",
-      343: "Who Are You?",
-      344: "Obito and Madara",
-      345: "I'm in Hell",
-      346: 	"World of Dreams",
-      347: "Creeping Shadow",
-      348: "The New Akatsuki"
+    {
+      'episode': 15,
+      'title': 'The Secret Weapon is Called....'
     },
-    'Season 16': {
-      349: "A Mask That Hides The Heart",
-      350: "Minato's Death",
-      351: "Hashirama's Cells",
-      352: "The Rogue Ninja Orochimaru",
-      353: "Orochimaru's Test Subject",
-      354: "Their Own Paths",
-      355: "The Targeted Sharingan",
-      356: "A Shinobi of the Leaf",
-      357: "An Uchiha ANBU",
-      358: "Coup d'État",
-      359: "The Night of the Tragedy",
-      360: "Jōnin Leader",
-      361: "Team 7"
+    {
+      'episode': 16,
+      'title': 'The Secret of Jinchuriki'
     },
-    'Season 17': {
-      362: "Kakashi's Resolve",
-      363: "The Allied Shinobi Forces Jutsu",
-      364: "The Ties That Bind",
-      365: "Those Who Dance in the Shadows",
-      366: "The All-Knowing",
-      367: "Hashirama and Madara",
-      368: "The Era of Warring States",
-      369: "My True Dream",
-      370: "Sasuke's Answer",
-      371: "Hole",
-      372: "Something to Fill the Hole"
+    {
+      'episode': 17,
+      'title': 'The Death of Gaara!'
     },
-    'Season 18': {
-      373: "Team 7 Assemble!",
-      374: "The New Three-Way Deadlock",
-      375: "Kakashi vs. Obito",
-      376: "The Directive to Take the Nine-Tails!",
-      377: "Naruto vs. Mecha Naruto",
-      378: "The Ten Tails' Jinchuriki",
-      379: "An Opening",
-      380: "The Day Naruto Was Born",
-      381: "The Divine Tree",
-      382: "A Shinobi's Dream",
-      383: "Pursuing Hope",
-      384: "A Heart Filled With Comrades",
-      385: "Obito Uchiha",
-      386: "I'm Always Watching",
-      387: "The Promise That Was Kept",
-      388: "My First Friend",
-      389: "The Adored Elder Sister",
-      390: "Hanabi's Decision",
-      391: "Madara Uchiha Arises",
-      392: "The Hidden Heart",
-      393: "A True Ending"
+    {
+      'episode': 18,
+      'title': 'Charge Tactic! Button Hook Entry!!'
     },
-    'Season 19': {
-      394: "The New Chunin Exams",
-      395: "The Chunin Exams Begin",
-      396: "The Three Questions",
-      397: "One Worthy As A Leader",
-      398: "The Night Before the Second Exam",
-      399: "Demon Desert Survival",
-      400: "As a Taijutsu User",
-      401: "The Ultimate",
-      402: "Escape vs. Pursuit",
-      403: "Unwavering Gutsiness",
-      404: "Tenten's Troubles",
-      405: "The Imprisoned Pair",
-      406: "The Place Where I Belong",
-      407: "The Yamanaka Clan: Secret Ninjutsu",
-      408: "The Cursed Puppet",
-      409: "Their Backs",
-      410: "The Hidden Plot Set Into Motion",
-      411: "The Targeted Tailed Beast",
-      412: "Neji's Judgment",
-      413: "Hopes Entrusted to the Future"
+    {
+      'episode': 19,
+      'title': 'Traps Activate! Team Guy\'s Enemy'
     },
-    'Season 20': {
-      414: "On the Brink of Death",
-      415: "The Two Mangekyo",
-      416: "The Formation of Team Minato",
-      417: "You'll Be My Backup",
-      418: "The Blue Beast vs. Six Paths Madara",
-      419: "Papa's Youth",
-      420: "The Eight Inner Gates Formation",
-      421: "The Sage of the Six Paths",
-      422: "The Ones Who Will Inherit",
-      423: "Naruto's Rival",
-      424: "To Rise Up",
-      425: "The Infinite Dream",
-      426: "The Infinite Tsukuyomi",
-      427: "To the Dream World",
-      428: "Where Tenten Belongs",
-      429: "Killer Bee Rappuden - Part 1",
-      430: "Killer Bee Rappuden - Part 2",
-      431: "To See That Smile, Just One More Time",
-      432: "The Loser Ninja",
-      433: "The Search Mission",
-      434: "Team Jiraiya",
-      435: "Order of Priority",
-      436: "The Masked Man",
-      437: "The Sealed Power",
-      438: "The Rules or a Comrade",
-      439: "The Child of Prophecy",
-      440: "The Caged Bird",
-      441: "Returning Home",
-      442: "The Mutual Path",
-      443: "The Difference in Power",
-      444: "Leaving the Village",
-      445: "Pursuers",
-      446: "Collision",
-      447: "Another Moon",
-      448: "Comrade",
-      449: "The Shinobi Unite",
-      450: "Rival",
-      451: "Birth and Death",
-      452: "The Genius",
-      453: "The Pain of Living",
-      454: "Shisui's Request",
-      455: "Moonlit Night",
-      456: "The Darkness of the Akatsuki",
-      457: "Partner",
-      458: "Truth",
-      459: "She of the Beginning",
-      460: "Kaguya Ōtsutsuki",
-      461: "Hagoromo and Hamura",
-      462: "A Fabricated Past",
-      463: "The No. 1 Most Unpredictable Ninja",
-      464: "Ninshu: The Ninja Creed",
-      465: "Ashura and Indra",
-      466: "The Tumultuous Journey",
-      467: "Ashura's Decision",
-      468: "The Successor",
-      469: "A Special Mission",
-      470: "Connecting Thoughts",
-      471: "The Two of Them... Always",
-      472: "You Better...",
-      473: "Sharingan Again",
-      474: "Congratulations",
-      475: "The Final Valley",
-      476: "The Final Battle",
-      477: "Naruto and Sasuke",
-      478: "The Unison Sign",
-      479: "Naruto Uzumaki!"
+    {
+      'episode': 20,
+      'title': 'Hiruko vs. Two Kunoichi!'
     },
-    'Season 21': {
-      480: "Naruto and Hinata",
-      481: "Sasuke and Sakura",
-      482: "Gaara and Shikamaru",
-      483: "Jiraiya and Kakashi",
-      484: "The Exploding Human",
-      485: "Coliseum",
-      486: "Fūshin",
-      487: "The Ketsuryūgan",
-      488: "The Last One",
-      489: "The State of Affairs",
-      490: "Dark Clouds",
-      491: "Recklessness",
-      492: "Cloud of Suspicion",
-      493: "Dawn",
-      494: "Naruto's Wedding",
-      495: "A Full-Powered Wedding Gift",
-      496: "Steam and Food Pills",
-      497: "The Kazekage's Wedding Gift",
-      498: "The Last Mission",
-      499: "The Outcome of the Secret Mission",
-      500: "The Message"
+    {
+      'episode': 21,
+      'title': 'Sasori\'s Real Face'
     },
-    'Movies': {
-      1: 'Naruto Shippuuden The Movie',
-      2: 'Bonds',
-      3: 'The Will Of Fire',
-      4: 'The Lost Tower',
-      5: 'Blood Prison',
-      6: 'Road To Ninja',
-      7: 'The Last',
-      8: 'Boruto'
+    {
+      'episode': 22,
+      'title': 'Chiyo\'s Secret Skills'
+    },
+    {
+      'episode': 23,
+      'title': 'Father and Mother'
+    },
+    {
+      'episode': 24,
+      'title': 'The Third Kazekage'
+    },
+    {
+      'episode': 25,
+      'title': 'Three Minutes Between Life and Death'
+    },
+    {
+      'episode': 26,
+      'title': 'Puppet Fight: 10 vs. 100!'
+    },
+    {
+      'episode': 27,
+      'title': 'Impossible Dream'
+    },
+    {
+      'episode': 28,
+      'title': 'Beasts: Alive Again!'
+    },
+    {
+      'episode': 29,
+      'title': 'Kakashi Enlightened!'
+    },
+    {
+      'episode': 30,
+      'title': 'Aesthetics of an Instant'
+    },
+    {
+      'episode': 31,
+      'title': 'The Legacy'
+    },
+    {
+      'episode': 32,
+      'title': 'Return of the Kazekage'
     }
-  }
-]
+  ],
+  'Season 2': [
+    {
+      'episode': 33,
+      'title': 'The New Target'
+    },
+    {
+      'episode': 34,
+      'title': 'Formation! New Team Kakashi!'
+    },
+    {
+      'episode': 35,
+      'title': 'An Unnecessary Addition'
+    },
+    {
+      'episode': 36,
+      'title': 'The Fake Smile'
+    },
+    {
+      'episode': 37,
+      'title': 'Untitled'
+    },
+    {
+      'episode': 38,
+      'title': 'Simulation'
+    },
+    {
+      'episode': 39,
+      'title': 'The Tenchi Bridge'
+    },
+    {
+      'episode': 40,
+      'title': 'The Nine-Tails Unleashed'
+    },
+    {
+      'episode': 41,
+      'title': 'The Top-Secret Mission Begins'
+    },
+    {
+      'episode': 42,
+      'title': 'Orochimaru vs. Jinchuriki'
+    },
+    {
+      'episode': 43,
+      'title': 'Sakura\'s Tears'
+    },
+    {
+      'episode': 44,
+      'title': 'The Secret of the Battle!'
+    },
+    {
+      'episode': 45,
+      'title': 'The Consequences of Betrayal'
+    },
+    {
+      'episode': 46,
+      'title': 'The Unfinished Page'
+    },
+    {
+      'episode': 47,
+      'title': 'Infiltration: The Den of the Snake!'
+    },
+    {
+      'episode': 48,
+      'title': 'Bonds'
+    },
+    {
+      'episode': 49,
+      'title': 'Something Important...'
+    },
+    {
+      'episode': 50,
+      'title': 'The Picture Book\'s Story'
+    },
+    {
+      'episode': 51,
+      'title': 'Reunion'
+    },
+    {
+      'episode': 52,
+      'title': 'The Power of Uchiha'
+    },
+    {
+      'episode': 53,
+      'title': 'Title'
+    }
+  ],
+  'Season 3': [
+    {
+      'episode': 54,
+      'title': 'Nightmare'
+    },
+    {
+      'episode': 55,
+      'title': 'Wind'
+    },
+    {
+      'episode': 56,
+      'title': 'Writhe'
+    },
+    {
+      'episode': 57,
+      'title': 'Deprived of Eternal Sleep'
+    },
+    {
+      'episode': 58,
+      'title': 'Loneliness'
+    },
+    {
+      'episode': 59,
+      'title': 'A New Enemy'
+    },
+    {
+      'episode': 60,
+      'title': 'Impermanence'
+    },
+    {
+      'episode': 61,
+      'title': 'Contact'
+    },
+    {
+      'episode': 62,
+      'title': 'Teammate'
+    },
+    {
+      'episode': 63,
+      'title': 'The Two Kings'
+    },
+    {
+      'episode': 64,
+      'title': 'Jet Black Signal Fire'
+    },
+    {
+      'episode': 65,
+      'title': 'Lockdown of Darkness'
+    },
+    {
+      'episode': 66,
+      'title': 'Revived Souls'
+    },
+    {
+      'episode': 67,
+      'title': 'Everyone\'s Struggle to the Death'
+    },
+    {
+      'episode': 68,
+      'title': 'Moment of Awakening'
+    },
+    {
+      'episode': 69,
+      'title': 'Despair'
+    },
+    {
+      'episode': 70,
+      'title': 'Resonance'
+    },
+    {
+      'episode': 71,
+      'title': 'My Friend'
+    }
+  ],
+  'Season 4': [
+    {
+      'episode': 72,
+      'title': 'The Quietly Approaching Threat'
+    },
+    {
+      'episode': 73,
+      'title': 'Akatsuki\'s Invasion'
+    },
+    {
+      'episode': 74,
+      'title': 'Under the Starry Sky'
+    },
+    {
+      'episode': 75,
+      'title': 'The Old Monk\'s Prayer'
+    },
+    {
+      'episode': 76,
+      'title': 'The Next Step'
+    },
+    {
+      'episode': 77,
+      'title': 'Climbing Silver'
+    },
+    {
+      'episode': 78,
+      'title': 'The Judgment'
+    },
+    {
+      'episode': 79,
+      'title': 'Unfulfilled Scream'
+    },
+    {
+      'episode': 80,
+      'title': 'Last Words'
+    },
+    {
+      'episode': 81,
+      'title': 'Sad News'
+    },
+    {
+      'episode': 82,
+      'title': 'Team Ten'
+    },
+    {
+      'episode': 83,
+      'title': 'Target: Locked On'
+    },
+    {
+      'episode': 84,
+      'title': 'Kakuzu\'s Abilities'
+    },
+    {
+      'episode': 85,
+      'title': 'The Terrifying Secret'
+    },
+    {
+      'episode': 86,
+      'title': 'Shikamaru\'s Genius'
+    },
+    {
+      'episode': 87,
+      'title': 'When You Curse Someone, You Dig Your Own Grave'
+    },
+    {
+      'episode': 88,
+      'title': 'Wind Style: Rasen Shuriken!'
+    }
+  ],
+  'Season 5': [
+    {
+      'episode': 89,
+      'title': 'The Price of Power'
+    },
+    {
+      'episode': 90,
+      'title': 'A Shinobi\'s Determination'
+    },
+    {
+      'episode': 91,
+      'title': 'Orochimaru\'s Hideout Discovered'
+    },
+    {
+      'episode': 92,
+      'title': 'Encounter'
+    },
+    {
+      'episode': 93,
+      'title': 'Connecting Hearts'
+    },
+    {
+      'episode': 94,
+      'title': 'A Night of Rain'
+    },
+    {
+      'episode': 95,
+      'title': 'The Two Charms'
+    },
+    {
+      'episode': 96,
+      'title': 'The Unseeing Enemy'
+    },
+    {
+      'episode': 97,
+      'title': 'The Labyrinth of Distorted Reflection'
+    },
+    {
+      'episode': 98,
+      'title': 'The Target Appears'
+    },
+    {
+      'episode': 99,
+      'title': 'The Rampaging Tailed Beast'
+    },
+    {
+      'episode': 100,
+      'title': 'Inside the Mist'
+    },
+    {
+      'episode': 101,
+      'title': 'Everyone\'s Feelings'
+    },
+    {
+      'episode': 102,
+      'title': 'Regroup!'
+    },
+    {
+      'episode': 103,
+      'title': 'The Four-Corner Sealing Barrier'
+    },
+    {
+      'episode': 104,
+      'title': 'Breaking the Crystal Style'
+    },
+    {
+      'episode': 105,
+      'title': 'The Battle Over the Barrier'
+    },
+    {
+      'episode': 106,
+      'title': 'Red Camellia'
+    },
+    {
+      'episode': 107,
+      'title': 'Strange Bedfellows'
+    },
+    {
+      'episode': 108,
+      'title': 'Guidepost of the Camellia'
+    },
+    {
+      'episode': 109,
+      'title': 'Counterattack of the Curse Mark'
+    },
+    {
+      'episode': 110,
+      'title': 'Memory of Guilt'
+    },
+    {
+      'episode': 111,
+      'title': 'Shattered Promise'
+    },
+    {
+      'episode': 112,
+      'title': 'A Place to Return To'
+    }
+  ],
+  'Season 6': [
+    {
+      'episode': 113,
+      'title': 'The Serpent\'s Pupil'
+    },
+    {
+      'episode': 114,
+      'title': 'Eye of the Hawk'
+    },
+    {
+      'episode': 115,
+      'title': 'Zabuza\'s Blade'
+    },
+    {
+      'episode': 116,
+      'title': 'Guardian of the Iron Wall'
+    },
+    {
+      'episode': 117,
+      'title': 'Jugo of the North Hideout'
+    },
+    {
+      'episode': 118,
+      'title': 'Formation!'
+    },
+    {
+      'episode': 119,
+      'title': 'Kakashi Chronicles ~ Boys\' Life on the Battlefield ~ Part 1'
+    },
+    {
+      'episode': 120,
+      'title': 'Kakashi Chronicles ~ Boys\' Life on the Battlefield ~ Part 2'
+    },
+    {
+      'episode': 121,
+      'title': 'Assemble'
+    },
+    {
+      'episode': 122,
+      'title': 'The Hunt'
+    },
+    {
+      'episode': 123,
+      'title': 'Clash!'
+    },
+    {
+      'episode': 124,
+      'title': 'Art'
+    },
+    {
+      'episode': 125,
+      'title': 'Disappearance'
+    },
+    {
+      'episode': 126,
+      'title': 'Twilight'
+    },
+    {
+      'episode': 127,
+      'title': 'Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 1'
+    },
+    {
+      'episode': 128,
+      'title': 'Tales of a Gutsy Ninja ~Jiraiya Ninja Scroll~ Part 2'
+    },
+    {
+      'episode': 129,
+      'title': 'Infiltrate! The Village Hidden in the Rain'
+    },
+    {
+      'episode': 130,
+      'title': 'The Man Who Became God'
+    },
+    {
+      'episode': 131,
+      'title': 'Honored Sage Mode!'
+    },
+    {
+      'episode': 132,
+      'title': 'In Attendance, the Six Paths of Pain'
+    },
+    {
+      'episode': 133,
+      'title': 'The Tale of Jiraiya the Gallant'
+    },
+    {
+      'episode': 134,
+      'title': 'Banquet Invitation'
+    },
+    {
+      'episode': 135,
+      'title': 'The Longest Moment'
+    },
+    {
+      'episode': 136,
+      'title': 'The Light & Dark of the Mangekyo Sharingan'
+    },
+    {
+      'episode': 137,
+      'title': 'Amaterasu!'
+    },
+    {
+      'episode': 138,
+      'title': 'The End'
+    },
+    {
+      'episode': 139,
+      'title': 'The Mystery of Tobi'
+    },
+    {
+      'episode': 140,
+      'title': 'Fate'
+    },
+    {
+      'episode': 141,
+      'title': 'Truth'
+    },
+    {
+      'episode': 142,
+      'title': 'Battle of Unraikyo'
+    },
+    {
+      'episode': 143,
+      'title': 'The Eight-Tails vs. Sasuke'
+    }
+  ],
+  'Season 7': [
+    {
+      'episode': 144,
+      'title': 'Wanderer'
+    },
+    {
+      'episode': 145,
+      'title': 'Successor of the Forbidden Jutsu'
+    },
+    {
+      'episode': 146,
+      'title': 'The Successor\'s Wish'
+    },
+    {
+      'episode': 147,
+      'title': 'Rogue Ninja\'s Past'
+    },
+    {
+      'episode': 148,
+      'title': 'Heir to Darkness'
+    },
+    {
+      'episode': 149,
+      'title': 'Parting'
+    },
+    {
+      'episode': 150,
+      'title': 'The Forbidden Jutsu Released'
+    },
+    {
+      'episode': 151,
+      'title': 'Master and Student'
+    }
+  ],
+  'Season 8': [
+    {
+      'episode': 152,
+      'title': 'Somber News'
+    },
+    {
+      'episode': 153,
+      'title': 'Following the Master\'s Shadow'
+    },
+    {
+      'episode': 154,
+      'title': 'Decryption'
+    },
+    {
+      'episode': 155,
+      'title': 'The First Challenge'
+    },
+    {
+      'episode': 156,
+      'title': 'Surpassing the Master'
+    },
+    {
+      'episode': 157,
+      'title': 'Assault on the Leaf Village!'
+    },
+    {
+      'episode': 158,
+      'title': 'Power to Believe'
+    },
+    {
+      'episode': 159,
+      'title': 'Pain vs. Kakashi'
+    },
+    {
+      'episode': 160,
+      'title': 'Mystery of Pain'
+    },
+    {
+      'episode': 161,
+      'title': 'Surname Is Sarutobi. Given Name, Konohamaru!'
+    },
+    {
+      'episode': 162,
+      'title': 'Pain to the World'
+    },
+    {
+      'episode': 163,
+      'title': 'Explode! Sage Mode'
+    },
+    {
+      'episode': 164,
+      'title': 'Danger! Sage Mode Limit Reached'
+    },
+    {
+      'episode': 165,
+      'title': 'Nine-Tails, Captured!'
+    },
+    {
+      'episode': 166,
+      'title': 'Confessions'
+    },
+    {
+      'episode': 167,
+      'title': 'Planetary Devastation'
+    },
+    {
+      'episode': 168,
+      'title': 'The Fourth Hokage'
+    },
+    {
+      'episode': 169,
+      'title': 'The Two Students'
+    },
+    {
+      'episode': 170,
+      'title': 'Big Adventure! The Quest for the Fourth Hokage\'s Legacy - Part 1'
+    },
+    {
+      'episode': 171,
+      'title': 'Big Adventure! The Quest for the Fourth Hokage\'s Legacy - Part 2'
+    },
+    {
+      'episode': 172,
+      'title': 'Meeting'
+    },
+    {
+      'episode': 173,
+      'title': 'Origin of Pain'
+    },
+    {
+      'episode': 174,
+      'title': 'Tale of Naruto Uzumaki'
+    },
+    {
+      'episode': 175,
+      'title': 'Hero of the Leaf'
+    }
+  ],
+  'Season 9': [
+    {
+      'episode': 176,
+      'title': 'Rookie Instructor Iruka'
+    },
+    {
+      'episode': 177,
+      'title': 'Iruka\'s Ordeal'
+    },
+    {
+      'episode': 178,
+      'title': 'Iruka\'s Decision'
+    },
+    {
+      'episode': 179,
+      'title': 'Kakashi Hatake, The Jonin in Charge'
+    },
+    {
+      'episode': 180,
+      'title': 'Inari\'s Courage Put to the Test'
+    },
+    {
+      'episode': 181,
+      'title': 'Naruto\'s School of Revenge'
+    },
+    {
+      'episode': 182,
+      'title': 'Gaara\'s Bond'
+    },
+    {
+      'episode': 183,
+      'title': 'Naruto: Outbreak'
+    },
+    {
+      'episode': 184,
+      'title': 'Deploy! Team Tenten'
+    },
+    {
+      'episode': 185,
+      'title': 'Animal District'
+    },
+    {
+      'episode': 186,
+      'title': 'Ah, the Medicine of Youth'
+    },
+    {
+      'episode': 187,
+      'title': 'Gutsy Master and Student: The Training'
+    },
+    {
+      'episode': 188,
+      'title': 'Record of the Ninja Gutsy Master and Student'
+    },
+    {
+      'episode': 189,
+      'title': 'Sasuke\'s Paw Encyclopedia'
+    },
+    {
+      'episode': 190,
+      'title': 'Naruto and the Old Soldier'
+    },
+    {
+      'episode': 191,
+      'title': 'Kakashi Love Song'
+    },
+    {
+      'episode': 192,
+      'title': 'Neji Chronicles'
+    },
+    {
+      'episode': 193,
+      'title': 'The Man Who Died Twice'
+    },
+    {
+      'episode': 194,
+      'title': 'The Worst Three-Legged Race'
+    },
+    {
+      'episode': 195,
+      'title': 'Team 10\'s Teamwork'
+    },
+    {
+      'episode': 196,
+      'title': 'Drive Towards Darkness'
+    }
+  ],
+  'Season 10': [
+    {
+      'episode': 197,
+      'title': 'The Sixth Hokage Danzo'
+    },
+    {
+      'episode': 198,
+      'title': 'Five Kage Summit\'s Eve'
+    },
+    {
+      'episode': 199,
+      'title': 'Enter the Five Kage!'
+    },
+    {
+      'episode': 200,
+      'title': 'Naruto\'s Plea'
+    },
+    {
+      'episode': 201,
+      'title': 'Painful Decision'
+    },
+    {
+      'episode': 202,
+      'title': 'Racing Lightning'
+    },
+    {
+      'episode': 203,
+      'title': 'Sasuke\'s Ninja Way'
+    },
+    {
+      'episode': 204,
+      'title': 'Power of the Five Kage'
+    },
+    {
+      'episode': 205,
+      'title': 'Declaration of War'
+    },
+    {
+      'episode': 206,
+      'title': 'Sakura\'s Feelings'
+    },
+    {
+      'episode': 207,
+      'title': 'The Tailed Beast vs. The Tailless Tailed Beast'
+    },
+    {
+      'episode': 208,
+      'title': 'As One\'s Friend'
+    },
+    {
+      'episode': 209,
+      'title': 'Danzo\'s Right Arm'
+    },
+    {
+      'episode': 210,
+      'title': 'The Forbidden Visual Jutsu'
+    },
+    {
+      'episode': 211,
+      'title': 'Danzo Shimura'
+    },
+    {
+      'episode': 212,
+      'title': 'Sakura\'s Resolve'
+    },
+    {
+      'episode': 213,
+      'title': 'Lost Bonds'
+    },
+    {
+      'episode': 214,
+      'title': 'The Burden'
+    },
+    {
+      'episode': 215,
+      'title': 'Two Fates'
+    },
+    {
+      'episode': 216,
+      'title': 'High-Level Shinobi'
+    },
+    {
+      'episode': 217,
+      'title': 'The Infiltrator'
+    },
+    {
+      'episode': 218,
+      'title': 'The Five Great Nations Mobilize'
+    },
+    {
+      'episode': 219,
+      'title': 'Kakashi Hatake, the Hokage'
+    },
+    {
+      'episode': 220,
+      'title': 'Prophecy of the Great Lord Elder'
+    },
+    {
+      'episode': 221,
+      'title': 'Storage'
+    }
+  ],
+  'Season 11': [
+    {
+      'episode': 222,
+      'title': 'The Five Kage\'s Decision'
+    },
+    {
+      'episode': 223,
+      'title': 'The Young Man and the Sea'
+    },
+    {
+      'episode': 224,
+      'title': 'The Ninja of Benisu'
+    },
+    {
+      'episode': 225,
+      'title': 'The Cursed Ghost Ship'
+    },
+    {
+      'episode': 226,
+      'title': 'Battleship Island'
+    },
+    {
+      'episode': 227,
+      'title': 'The Forgotten Island'
+    },
+    {
+      'episode': 228,
+      'title': 'Fight! Rock Lee!'
+    },
+    {
+      'episode': 229,
+      'title': 'Eat or Die! Mushrooms from Hell!'
+    },
+    {
+      'episode': 230,
+      'title': 'Revenge of the Shadow Clones'
+    },
+    {
+      'episode': 231,
+      'title': 'The Closed Route'
+    },
+    {
+      'episode': 232,
+      'title': 'The Girls\' Get-Together'
+    },
+    {
+      'episode': 233,
+      'title': 'Naruto\'s Imposter'
+    },
+    {
+      'episode': 234,
+      'title': 'Naruto\'s Favorite Pupil'
+    },
+    {
+      'episode': 235,
+      'title': 'The Kunoichi of Nadeshiko Village'
+    },
+    {
+      'episode': 236,
+      'title': 'Friends You Can Count On'
+    },
+    {
+      'episode': 237,
+      'title': 'Ah, My Hero Lady Tsunade!'
+    },
+    {
+      'episode': 238,
+      'title': 'Sai\'s Day Off'
+    },
+    {
+      'episode': 239,
+      'title': 'The Legendary Ino-Shika-Cho'
+    },
+    {
+      'episode': 240,
+      'title': 'Kiba\'s Determination'
+    },
+    {
+      'episode': 241,
+      'title': 'Kakashi, My Eternal Rival!'
+    },
+    {
+      'episode': 242,
+      'title': 'Naruto\'s Vow'
+    }
+  ],
+  'Season 12': [
+    {
+      'episode': 243,
+      'title': 'Land Ahoy! Is this the Paradise Island?'
+    },
+    {
+      'episode': 244,
+      'title': 'Killer Bee and Motoi'
+    },
+    {
+      'episode': 245,
+      'title': 'The Next Challenge! Naruto vs. The Nine Tails'
+    },
+    {
+      'episode': 246,
+      'title': 'The Orange Spark'
+    },
+    {
+      'episode': 247,
+      'title': 'Target: Nine Tails'
+    },
+    {
+      'episode': 248,
+      'title': 'The Fourth Hokage\'s Death Match!'
+    },
+    {
+      'episode': 249,
+      'title': 'Thank You'
+    },
+    {
+      'episode': 250,
+      'title': 'Battle in Paradise! Odd Beast vs. The Monster!'
+    },
+    {
+      'episode': 251,
+      'title': 'The Man Named Kisame'
+    },
+    {
+      'episode': 252,
+      'title': 'The Angelic Herald of Death'
+    },
+    {
+      'episode': 253,
+      'title': 'The Bridge to Peace'
+    },
+    {
+      'episode': 254,
+      'title': 'The Super Secret S-Rank Mission'
+    },
+    {
+      'episode': 255,
+      'title': 'The Artist Returns'
+    },
+    {
+      'episode': 256,
+      'title': 'Assemble! Allied Shinobi Forces!'
+    },
+    {
+      'episode': 257,
+      'title': 'Meeting'
+    },
+    {
+      'episode': 258,
+      'title': 'Rivals'
+    },
+    {
+      'episode': 259,
+      'title': 'Rift'
+    },
+    {
+      'episode': 260,
+      'title': 'Parting'
+    },
+    {
+      'episode': 261,
+      'title': 'For My Friend'
+    },
+    {
+      'episode': 262,
+      'title': 'War Begins'
+    },
+    {
+      'episode': 263,
+      'title': 'Sai And Shin'
+    },
+    {
+      'episode': 264,
+      'title': 'Secrets of the Reanimation Jutsu'
+    },
+    {
+      'episode': 265,
+      'title': 'An Old Nemesis Returns'
+    },
+    {
+      'episode': 266,
+      'title': 'The First and Last Opponent'
+    },
+    {
+      'episode': 267,
+      'title': 'The Brilliant Military Advisor of the Hidden Leaf'
+    },
+    {
+      'episode': 268,
+      'title': 'Battleground!'
+    },
+    {
+      'episode': 269,
+      'title': 'Forbidden Words'
+    },
+    {
+      'episode': 270,
+      'title': 'Golden Bonds'
+    },
+    {
+      'episode': 271,
+      'title': 'Road to Sakura'
+    },
+    {
+      'episode': 272,
+      'title': 'Mifune vs. Hanzo'
+    },
+    {
+      'episode': 273,
+      'title': 'True Kindness'
+    },
+    {
+      'episode': 274,
+      'title': 'The Complete Ino-Shika-Cho Formation!'
+    },
+    {
+      'episode': 275,
+      'title': 'A Message from the Heart'
+    }
+  ],
+  'Season 13': [
+    {
+      'episode': 276,
+      'title': 'Attack of the Gedo Statue'
+    },
+    {
+      'episode': 277,
+      'title': 'Unison Sign'
+    },
+    {
+      'episode': 278,
+      'title': 'Medic Ninja in Danger'
+    },
+    {
+      'episode': 279,
+      'title': 'White Zetsu\'s Trap'
+    },
+    {
+      'episode': 280,
+      'title': 'Aesthetics of an Artist'
+    },
+    {
+      'episode': 281,
+      'title': 'The Allied Mom Force!!'
+    },
+    {
+      'episode': 282,
+      'title': 'The Secret Origin of the Ultimate Tag Team!'
+    },
+    {
+      'episode': 283,
+      'title': 'Two Suns'
+    },
+    {
+      'episode': 284,
+      'title': 'The Helmet Splitter: Jinin Akebino!'
+    },
+    {
+      'episode': 285,
+      'title': 'User of the Scorch Style: Pakura of the Sand!'
+    },
+    {
+      'episode': 286,
+      'title': 'Things You Can\'t Get Back'
+    },
+    {
+      'episode': 287,
+      'title': 'One Worth Betting On'
+    },
+    {
+      'episode': 288,
+      'title': 'Danger: Jinpachi and Kushimaru!'
+    },
+    {
+      'episode': 289,
+      'title': 'The Lightning Blade: Ameyuri Ringo!'
+    },
+    {
+      'episode': 290,
+      'title': 'Power - Episode 1'
+    },
+    {
+      'episode': 291,
+      'title': 'Power - Episode 2'
+    },
+    {
+      'episode': 292,
+      'title': 'Power - Episode 3'
+    },
+    {
+      'episode': 293,
+      'title': 'Power - Episode 4'
+    },
+    {
+      'episode': 294,
+      'title': 'Power - Episode 5'
+    },
+    {
+      'episode': 295,
+      'title': 'Power - Final Episode'
+    }
+  ],
+  'Season 14': [
+    {
+      'episode': 296,
+      'title': 'Naruto Enters the Battle!'
+    },
+    {
+      'episode': 297,
+      'title': 'A Father\'s Hope, A Mother\'s Love'
+    },
+    {
+      'episode': 298,
+      'title': 'Contact! Naruto vs. Itachi'
+    },
+    {
+      'episode': 299,
+      'title': 'The Acknowledged One'
+    },
+    {
+      'episode': 300,
+      'title': 'The Mizukage, the Giant Clam, and the Mirage'
+    },
+    {
+      'episode': 301,
+      'title': 'Paradox'
+    },
+    {
+      'episode': 302,
+      'title': 'Terror: The Steam Imp'
+    },
+    {
+      'episode': 303,
+      'title': 'Ghosts from the Past'
+    },
+    {
+      'episode': 304,
+      'title': 'The Underworld Transfer Jutsu'
+    },
+    {
+      'episode': 305,
+      'title': 'The Vengeful'
+    },
+    {
+      'episode': 306,
+      'title': 'The Heart\'s Eye'
+    },
+    {
+      'episode': 307,
+      'title': 'Fade into the Moonlight'
+    },
+    {
+      'episode': 308,
+      'title': 'Crescent Moonlight'
+    },
+    {
+      'episode': 309,
+      'title': 'The A-Rank Mission: Food Fight'
+    },
+    {
+      'episode': 310,
+      'title': 'The Fallen Castle'
+    },
+    {
+      'episode': 311,
+      'title': 'Prologue of Road to Ninja'
+    },
+    {
+      'episode': 312,
+      'title': 'The Old Master and the Dragon\'s Eye'
+    },
+    {
+      'episode': 313,
+      'title': 'Rain Followed by Snow, with Some Lightning'
+    },
+    {
+      'episode': 314,
+      'title': 'The Sad Sun Shower'
+    },
+    {
+      'episode': 315,
+      'title': 'Lingering Snow'
+    },
+    {
+      'episode': 316,
+      'title': 'The Reanimated Allied Forces'
+    },
+    {
+      'episode': 317,
+      'title': 'Shino vs. Torune!'
+    },
+    {
+      'episode': 318,
+      'title': 'A Hole in the Heart: The Other Jinchuriki'
+    },
+    {
+      'episode': 319,
+      'title': 'The Soul Living Inside the Puppet'
+    },
+    {
+      'episode': 320,
+      'title': 'Run, Omoi!'
+    }
+  ],
+  'Season 15': [
+    {
+      'episode': 321,
+      'title': 'Reinforcements Arrive'
+    },
+    {
+      'episode': 322,
+      'title': 'Madara Uchiha'
+    },
+    {
+      'episode': 323,
+      'title': 'The Five Kage Assemble'
+    },
+    {
+      'episode': 324,
+      'title': 'The Unbreakable Mask and the Shattered Bubble'
+    },
+    {
+      'episode': 325,
+      'title': 'Jinchūriki vs. Jinchūriki!!'
+    },
+    {
+      'episode': 326,
+      'title': 'Four Tails, the King of Sage Monkeys'
+    },
+    {
+      'episode': 327,
+      'title': 'Nine Tails'
+    },
+    {
+      'episode': 328,
+      'title': 'Kurama'
+    },
+    {
+      'episode': 329,
+      'title': 'Two-Man Team'
+    },
+    {
+      'episode': 330,
+      'title': 'The Promise of Victory'
+    },
+    {
+      'episode': 331,
+      'title': 'Eyes That See in the Dark'
+    },
+    {
+      'episode': 332,
+      'title': 'A Will of Stone'
+    },
+    {
+      'episode': 333,
+      'title': 'The Risks of the Reanimation Jutsu'
+    },
+    {
+      'episode': 334,
+      'title': 'Sibling Tag Team'
+    },
+    {
+      'episode': 335,
+      'title': 'To Each Their Own Leaf'
+    },
+    {
+      'episode': 336,
+      'title': 'Kabuto Yakushi'
+    },
+    {
+      'episode': 337,
+      'title': 'The Izanami Activated'
+    },
+    {
+      'episode': 338,
+      'title': 'Izanagi and Izanami'
+    },
+    {
+      'episode': 339,
+      'title': 'I Will Love You Always'
+    },
+    {
+      'episode': 340,
+      'title': 'Reanimation Jutsu: Release!'
+    },
+    {
+      'episode': 341,
+      'title': 'Orochimaru\'s Return'
+    },
+    {
+      'episode': 342,
+      'title': 'The Secret of the Transportation Technique'
+    },
+    {
+      'episode': 343,
+      'title': 'Who Are You?'
+    },
+    {
+      'episode': 344,
+      'title': 'Obito and Madara'
+    },
+    {
+      'episode': 345,
+      'title': 'I\'m in Hell'
+    },
+    {
+      'episode': 346,
+      'title': 'World of Dreams'
+    },
+    {
+      'episode': 347,
+      'title': 'Creeping Shadow'
+    },
+    {
+      'episode': 348,
+      'title': 'The New Akatsuki'
+    }
+  ],
+  'Season 16': [
+    {
+      'episode': 349,
+      'title': 'A Mask That Hides The Heart'
+    },
+    {
+      'episode': 350,
+      'title': 'Minato\'s Death'
+    },
+    {
+      'episode': 351,
+      'title': 'Hashirama\'s Cells'
+    },
+    {
+      'episode': 352,
+      'title': 'The Rogue Ninja Orochimaru'
+    },
+    {
+      'episode': 353,
+      'title': 'Orochimaru\'s Test Subject'
+    },
+    {
+      'episode': 354,
+      'title': 'Their Own Paths'
+    },
+    {
+      'episode': 355,
+      'title': 'The Targeted Sharingan'
+    },
+    {
+      'episode': 356,
+      'title': 'A Shinobi of the Leaf'
+    },
+    {
+      'episode': 357,
+      'title': 'An Uchiha ANBU'
+    },
+    {
+      'episode': 358,
+      'title': 'Coup d\'État'
+    },
+    {
+      'episode': 359,
+      'title': 'The Night of the Tragedy'
+    },
+    {
+      'episode': 360,
+      'title': 'Jōnin Leader'
+    },
+    {
+      'episode': 361,
+      'title': 'Team 7'
+    }
+  ],
+  'Season 17': [
+    {
+      'episode': 362,
+      'title': 'Kakashi\'s Resolve'
+    },
+    {
+      'episode': 363,
+      'title': 'The Allied Shinobi Forces Jutsu'
+    },
+    {
+      'episode': 364,
+      'title': 'The Ties That Bind'
+    },
+    {
+      'episode': 365,
+      'title': 'Those Who Dance in the Shadows'
+    },
+    {
+      'episode': 366,
+      'title': 'The All-Knowing'
+    },
+    {
+      'episode': 367,
+      'title': 'Hashirama and Madara'
+    },
+    {
+      'episode': 368,
+      'title': 'The Era of Warring States'
+    },
+    {
+      'episode': 369,
+      'title': 'My True Dream'
+    },
+    {
+      'episode': 370,
+      'title': 'Sasuke\'s Answer'
+    },
+    {
+      'episode': 371,
+      'title': 'Hole'
+    },
+    {
+      'episode': 372,
+      'title': 'Something to Fill the Hole'
+    }
+  ],
+  'Season 18': [
+    {
+      'episode': 373,
+      'title': 'Team 7 Assemble!'
+    },
+    {
+      'episode': 374,
+      'title': 'The New Three-Way Deadlock'
+    },
+    {
+      'episode': 375,
+      'title': 'Kakashi vs. Obito'
+    },
+    {
+      'episode': 376,
+      'title': 'The Directive to Take the Nine-Tails!'
+    },
+    {
+      'episode': 377,
+      'title': 'Naruto vs. Mecha Naruto'
+    },
+    {
+      'episode': 378,
+      'title': 'The Ten Tails\' Jinchuriki'
+    },
+    {
+      'episode': 379,
+      'title': 'An Opening'
+    },
+    {
+      'episode': 380,
+      'title': 'The Day Naruto Was Born'
+    },
+    {
+      'episode': 381,
+      'title': 'The Divine Tree'
+    },
+    {
+      'episode': 382,
+      'title': 'A Shinobi\'s Dream'
+    },
+    {
+      'episode': 383,
+      'title': 'Pursuing Hope'
+    },
+    {
+      'episode': 384,
+      'title': 'A Heart Filled With Comrades'
+    },
+    {
+      'episode': 385,
+      'title': 'Obito Uchiha'
+    },
+    {
+      'episode': 386,
+      'title': 'I\'m Always Watching'
+    },
+    {
+      'episode': 387,
+      'title': 'The Promise That Was Kept'
+    },
+    {
+      'episode': 388,
+      'title': 'My First Friend'
+    },
+    {
+      'episode': 389,
+      'title': 'The Adored Elder Sister'
+    },
+    {
+      'episode': 390,
+      'title': 'Hanabi\'s Decision'
+    },
+    {
+      'episode': 391,
+      'title': 'Madara Uchiha Arises'
+    },
+    {
+      'episode': 392,
+      'title': 'The Hidden Heart'
+    },
+    {
+      'episode': 393,
+      'title': 'A True Ending'
+    }
+  ],
+  'Season 19': [
+    {
+      'episode': 394,
+      'title': 'The New Chunin Exams'
+    },
+    {
+      'episode': 395,
+      'title': 'The Chunin Exams Begin'
+    },
+    {
+      'episode': 396,
+      'title': 'The Three Questions'
+    },
+    {
+      'episode': 397,
+      'title': 'One Worthy As A Leader'
+    },
+    {
+      'episode': 398,
+      'title': 'The Night Before the Second Exam'
+    },
+    {
+      'episode': 399,
+      'title': 'Demon Desert Survival'
+    },
+    {
+      'episode': 400,
+      'title': 'As a Taijutsu User'
+    },
+    {
+      'episode': 401,
+      'title': 'The Ultimate'
+    },
+    {
+      'episode': 402,
+      'title': 'Escape vs. Pursuit'
+    },
+    {
+      'episode': 403,
+      'title': 'Unwavering Gutsiness'
+    },
+    {
+      'episode': 404,
+      'title': 'Tenten\'s Troubles'
+    },
+    {
+      'episode': 405,
+      'title': 'The Imprisoned Pair'
+    },
+    {
+      'episode': 406,
+      'title': 'The Place Where I Belong'
+    },
+    {
+      'episode': 407,
+      'title': 'The Yamanaka Clan: Secret Ninjutsu'
+    },
+    {
+      'episode': 408,
+      'title': 'The Cursed Puppet'
+    },
+    {
+      'episode': 409,
+      'title': 'Their Backs'
+    },
+    {
+      'episode': 410,
+      'title': 'The Hidden Plot Set Into Motion'
+    },
+    {
+      'episode': 411,
+      'title': 'The Targeted Tailed Beast'
+    },
+    {
+      'episode': 412,
+      'title': 'Neji\'s Judgment'
+    },
+    {
+      'episode': 413,
+      'title': 'Hopes Entrusted to the Future'
+    }
+  ],
+  'Season 20': [
+    {
+      'episode': 414,
+      'title': 'On the Brink of Death'
+    },
+    {
+      'episode': 415,
+      'title': 'The Two Mangekyo'
+    },
+    {
+      'episode': 416,
+      'title': 'The Formation of Team Minato'
+    },
+    {
+      'episode': 417,
+      'title': 'You\'ll Be My Backup'
+    },
+    {
+      'episode': 418,
+      'title': 'The Blue Beast vs. Six Paths Madara'
+    },
+    {
+      'episode': 419,
+      'title': 'Papa\'s Youth'
+    },
+    {
+      'episode': 420,
+      'title': 'The Eight Inner Gates Formation'
+    },
+    {
+      'episode': 421,
+      'title': 'The Sage of the Six Paths'
+    },
+    {
+      'episode': 422,
+      'title': 'The Ones Who Will Inherit'
+    },
+    {
+      'episode': 423,
+      'title': 'Naruto\'s Rival'
+    },
+    {
+      'episode': 424,
+      'title': 'To Rise Up'
+    },
+    {
+      'episode': 425,
+      'title': 'The Infinite Dream'
+    },
+    {
+      'episode': 426,
+      'title': 'The Infinite Tsukuyomi'
+    },
+    {
+      'episode': 427,
+      'title': 'To the Dream World'
+    },
+    {
+      'episode': 428,
+      'title': 'Where Tenten Belongs'
+    },
+    {
+      'episode': 429,
+      'title': 'Killer Bee Rappuden - Part 1'
+    },
+    {
+      'episode': 430,
+      'title': 'Killer Bee Rappuden - Part 2'
+    },
+    {
+      'episode': 431,
+      'title': 'To See That Smile, Just One More Time'
+    },
+    {
+      'episode': 432,
+      'title': 'The Loser Ninja'
+    },
+    {
+      'episode': 433,
+      'title': 'The Search Mission'
+    },
+    {
+      'episode': 434,
+      'title': 'Team Jiraiya'
+    },
+    {
+      'episode': 435,
+      'title': 'Order of Priority'
+    },
+    {
+      'episode': 436,
+      'title': 'The Masked Man'
+    },
+    {
+      'episode': 437,
+      'title': 'The Sealed Power'
+    },
+    {
+      'episode': 438,
+      'title': 'The Rules or a Comrade'
+    },
+    {
+      'episode': 439,
+      'title': 'The Child of Prophecy'
+    },
+    {
+      'episode': 440,
+      'title': 'The Caged Bird'
+    },
+    {
+      'episode': 441,
+      'title': 'Returning Home'
+    },
+    {
+      'episode': 442,
+      'title': 'The Mutual Path'
+    },
+    {
+      'episode': 443,
+      'title': 'The Difference in Power'
+    },
+    {
+      'episode': 444,
+      'title': 'Leaving the Village'
+    },
+    {
+      'episode': 445,
+      'title': 'Pursuers'
+    },
+    {
+      'episode': 446,
+      'title': 'Collision'
+    },
+    {
+      'episode': 447,
+      'title': 'Another Moon'
+    },
+    {
+      'episode': 448,
+      'title': 'Comrade'
+    },
+    {
+      'episode': 449,
+      'title': 'The Shinobi Unite'
+    },
+    {
+      'episode': 450,
+      'title': 'Rival'
+    },
+    {
+      'episode': 451,
+      'title': 'Birth and Death'
+    },
+    {
+      'episode': 452,
+      'title': 'The Genius'
+    },
+    {
+      'episode': 453,
+      'title': 'The Pain of Living'
+    },
+    {
+      'episode': 454,
+      'title': 'Shisui\'s Request'
+    },
+    {
+      'episode': 455,
+      'title': 'Moonlit Night'
+    },
+    {
+      'episode': 456,
+      'title': 'The Darkness of the Akatsuki'
+    },
+    {
+      'episode': 457,
+      'title': 'Partner'
+    },
+    {
+      'episode': 458,
+      'title': 'Truth'
+    },
+    {
+      'episode': 459,
+      'title': 'She of the Beginning'
+    },
+    {
+      'episode': 460,
+      'title': 'Kaguya Ōtsutsuki'
+    },
+    {
+      'episode': 461,
+      'title': 'Hagoromo and Hamura'
+    },
+    {
+      'episode': 462,
+      'title': 'A Fabricated Past'
+    },
+    {
+      'episode': 463,
+      'title': 'The No. 1 Most Unpredictable Ninja'
+    },
+    {
+      'episode': 464,
+      'title': 'Ninshu: The Ninja Creed'
+    },
+    {
+      'episode': 465,
+      'title': 'Ashura and Indra'
+    },
+    {
+      'episode': 466,
+      'title': 'The Tumultuous Journey'
+    },
+    {
+      'episode': 467,
+      'title': 'Ashura\'s Decision'
+    },
+    {
+      'episode': 468,
+      'title': 'The Successor'
+    },
+    {
+      'episode': 469,
+      'title': 'A Special Mission'
+    },
+    {
+      'episode': 470,
+      'title': 'Connecting Thoughts'
+    },
+    {
+      'episode': 471,
+      'title': 'The Two of Them... Always'
+    },
+    {
+      'episode': 472,
+      'title': 'You Better...'
+    },
+    {
+      'episode': 473,
+      'title': 'Sharingan Again'
+    },
+    {
+      'episode': 474,
+      'title': 'Congratulations'
+    },
+    {
+      'episode': 475,
+      'title': 'The Final Valley'
+    },
+    {
+      'episode': 476,
+      'title': 'The Final Battle'
+    },
+    {
+      'episode': 477,
+      'title': 'Naruto and Sasuke'
+    },
+    {
+      'episode': 478,
+      'title': 'The Unison Sign'
+    },
+    {
+      'episode': 479,
+      'title': 'Naruto Uzumaki!'
+    }
+  ],
+  'Season 21': [
+    {
+      'episode': 480,
+      'title': 'Naruto and Hinata'
+    },
+    {
+      'episode': 481,
+      'title': 'Sasuke and Sakura'
+    },
+    {
+      'episode': 482,
+      'title': 'Gaara and Shikamaru'
+    },
+    {
+      'episode': 483,
+      'title': 'Jiraiya and Kakashi'
+    },
+    {
+      'episode': 484,
+      'title': 'The Exploding Human'
+    },
+    {
+      'episode': 485,
+      'title': 'Coliseum'
+    },
+    {
+      'episode': 486,
+      'title': 'Fūshin'
+    },
+    {
+      'episode': 487,
+      'title': 'The Ketsuryūgan'
+    },
+    {
+      'episode': 488,
+      'title': 'The Last One'
+    },
+    {
+      'episode': 489,
+      'title': 'The State of Affairs'
+    },
+    {
+      'episode': 490,
+      'title': 'Dark Clouds'
+    },
+    {
+      'episode': 491,
+      'title': 'Recklessness'
+    },
+    {
+      'episode': 492,
+      'title': 'Cloud of Suspicion'
+    },
+    {
+      'episode': 493,
+      'title': 'Dawn'
+    },
+    {
+      'episode': 494,
+      'title': 'Naruto\'s Wedding'
+    },
+    {
+      'episode': 495,
+      'title': 'A Full-Powered Wedding Gift'
+    },
+    {
+      'episode': 496,
+      'title': 'Steam and Food Pills'
+    },
+    {
+      'episode': 497,
+      'title': 'The Kazekage\'s Wedding Gift'
+    },
+    {
+      'episode': 498,
+      'title': 'The Last Mission'
+    },
+    {
+      'episode': 499,
+      'title': 'The Outcome of the Secret Mission'
+    },
+    {
+      'episode': 500,
+      'title': 'The Message'
+    }
+  ],
+  'Movies': [
+    {
+      'episode': 1,
+      'title': 'Naruto Shippuuden The Movie'
+    },
+    {
+      'episode': 2,
+      'title': 'Bonds'
+    },
+    {
+      'episode': 3,
+      'title': 'The Will Of Fire'
+    },
+    {
+      'episode': 4,
+      'title': 'The Lost Tower'
+    },
+    {
+      'episode': 5,
+      'title': 'Blood Prison'
+    },
+    {
+      'episode': 6,
+      'title': 'Road To Ninja'
+    },
+    {
+      'episode': 7,
+      'title': 'The Last'
+    },
+    {
+      'episode': 8,
+      'title': 'Boruto'
+    }
+  ]
+}
