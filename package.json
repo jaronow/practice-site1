@@ -24,6 +24,7 @@
   "dependencies": {},
   "devDependencies": {
     "handlebars": "^4.5.3",
-    "parcel-plugin-handlebars-precompile": "^1.0.1"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

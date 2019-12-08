@@ -1,14 +1,19 @@
+import {showSeries} from './modules/episode-functions.js'
+
+
+// All The Data needed to create episode, character, and jutsu lists
 import {narutoEpisodes} from '../data/naruto-episodes.js'
 import {shippuudenEpisodes} from '../data/shippuuden-episodes.js'
 import {characters} from '../data/characters.js'
 import {jutsu} from '../data/jutsu.js'
+
+// Handlebars templates
 import jutsuTemplate from './templates/jutsu-template.hbs'
 import characterTemplate from './templates/character-template.hbs'
 import episodeTempate from './templates/episode-template.hbs'
 
+// Elements and Event Listeners used in creating episode tables
 
-const narutoEpSelect = document.getElementById('naruto-episode-selection')
-const shippuudenEpSelect = document.getElementById('shippuuden-episode-selection')
 const seasonTable = document.getElementById('season-table')
 const tablePageSelect = document.getElementById('page-selection')
 
@@ -18,22 +23,7 @@ seasonButtons.forEach(button => button.addEventListener('click', showSeason))
 const seriesButtons = document.querySelectorAll('.series-button')
 seriesButtons.forEach(button => button.addEventListener('click', showSeries))
 
-function showSeries() {
-  switch(this.name) {
-    case 'naruto':
-    shippuudenEpSelect.classList.remove('active-series')
-    tablePageSelect.style.display = 'none'
-    seasonTable.innerHTML = ''
-    narutoEpSelect.classList.add('active-series')
-    break;
-    case 'shippuuden':
-    narutoEpSelect.classList.remove('active-series')
-    tablePageSelect.style.display = 'none'
-    seasonTable.innerHTML = ''
-    shippuudenEpSelect.classList.add('active-series')
-    break;
-  }
-}
+showSeries()
 
 function showSeason() {
   let season = ''
