@@ -357,6 +357,10 @@ button[name$="-village"] {
   height: 10em;
 }
 
+.character-image {
+  height: 50px;
+}
+
 .rank {
   font-size: .75em;
 }
