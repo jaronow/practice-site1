@@ -1,4 +1,6 @@
+// Import styling for webpack to build
 import '../css/style.css'
+
 // All The Data needed to create episode, character, and jutsu lists
 import {narutoEpisodes} from '../data/naruto-episodes.js'
 import {shippuudenEpisodes} from '../data/shippuuden-episodes.js'
@@ -22,6 +24,7 @@ seasonButtons.forEach(button => button.addEventListener('click', showSeason))
 const seriesButtons = document.querySelectorAll('.series-button')
 seriesButtons.forEach(button => button.addEventListener('click', showSeries))
 
+// Function that shows season selection of shows
 function showSeries() {
   switch(this.name) {
     case 'naruto':
@@ -39,6 +42,7 @@ function showSeries() {
   }
 }
 
+// function that selects desired season
 function showSeason() {
   let season = ''
   let seasonTitle =''
@@ -206,6 +210,7 @@ function showSeason() {
   }
 }
 
+// elements used in creating table with pagination of episodes
 let episodes = new Array()
 let episodeList = new Array()
 let seasonTitle = new Array()
@@ -214,9 +219,11 @@ const numPerPage = 10
 let numOfPages = 1
 const currentPageInfo = document.getElementById('current-page')
 
+//event listener for pagination buttons
 const pageButtons = document.querySelectorAll('.table-page')
 pageButtons.forEach(button => button.addEventListener('click', changePage))
 
+// functions that creates the desired season episode table
 function createSeason(title, season) {
   currentPage = 1
   seasonTitle = title
@@ -224,11 +231,13 @@ function createSeason(title, season) {
   getNumOfPages()
 }
 
+//function that gets total # of pages for pagination
 function getNumOfPages() {
   numOfPages = Math.ceil((episodeList.length - 1) / numPerPage)
   createEpisodeList()
 }
 
+//functions to change pages of table
 function changePage() {
   switch(this.name) {
     case 'next': nextPage()
@@ -254,6 +263,8 @@ function previousPage() {
   createEpisodeList()
 }
 
+
+// function that creates the list of episodes and pagination for the table
 function createEpisodeList() {
   let begin = ((currentPage - 1) * numPerPage)
   const end = begin + numPerPage
@@ -261,6 +272,7 @@ function createEpisodeList() {
   createTable()
 }
 
+// function that uses episode-template.hbs to create actual table
 function createTable() {
   seasonTable.innerHTML = episodeTempate(episodes)
   currentPageInfo.innerHTML = `Page ${currentPage} of ${numOfPages}`
@@ -269,11 +281,13 @@ function createTable() {
   tablePageSelect.style.display = 'flex'
 }
 
+// elements used in creating character and jutsu lists
 const villageSelection = document.querySelector('.village-selection')
 const jutsuSelection = document.querySelector('.jutsu-selection')
 const jutsuCharacterContainer = document.getElementById('character-jutsu-container')
 const jutsuCharacterTitle = document.getElementById('character-jutsu-container-title')
 
+//event listeners used to create character and jutsu lists
 const characterAndJutsuButtons = document.querySelectorAll('.character-jutsu-button')
 characterAndJutsuButtons.forEach(button => button.addEventListener('click', showMenu))
 
@@ -283,6 +297,7 @@ jutsuSelectionButtons.forEach(button => button.addEventListener('click', createJ
 const villageSelectionButtons = document.querySelectorAll('[name$=-village]')
 villageSelectionButtons.forEach(button => button.addEventListener('click', createCharacterList))
 
+// function to chooose character or jutsu list to display
 function showMenu(event) {
   switch(this.name){
     case 'jutsu':
@@ -300,6 +315,7 @@ function showMenu(event) {
   }
 }
 
+//function that creates list of selected jutsu
 function createJutsuList() {
   let jutsuList = ''
   let jutsuTitle = ''
@@ -377,6 +393,7 @@ function createJutsuList() {
   }
 }
 
+// function that creates list of chosen characters
 function createCharacterList() {
   let villageName = ''
   let characterList = ''
@@ -429,11 +446,14 @@ function createCharacterList() {
   }
 }
 
+
+// function that creates list of jutsu using jutsu-template.hbs
 function createJutsuTemplate(title, list) {
   jutsuCharacterTitle.innerHTML = title
   jutsuCharacterContainer.innerHTML = jutsuTemplate(list)
 }
 
+// function that creates list of characters using character-template.hbs
 function createCharacterTemplate(village, characters) {
   jutsuCharacterTitle.innerHTML = village
   jutsuCharacterContainer.innerHTML = characterTemplate(characters)
