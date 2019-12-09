@@ -4,13 +4,13 @@ export const characters = {
       'name': 'Kakashi Hatake',
       'team': 'Team 7',
       'rank': 'Jonin',
-      'image': './images/Kakashi.jpg'
+      'image': 'images/Kakashi.jpg'
     },
     {
       'name': 'Naruto Uzumaki',
       'team': 'Team 7',
       'rank': 'Genin',
-      'image': './images/naruto.jpg'
+      'image': 'images/naruto.jpg'
     },
     {
       'name': 'Sasuke Uchiha',
@@ -380,7 +380,7 @@ export const characters = {
       'name': 'Itachi Uchiha',
       'team': '',
       'rank': '',
-      'image': './images/Itachi-Uchiha.jpg'
+      'image': 'images/Itachi-Uchiha.jpg'
     },
     {
       'name': 'Deidara',
@@ -840,7 +840,7 @@ export const characters = {
       'name': 'Kurama',
       'team': '',
       'rank': 'Nine-Tails',
-      'image': './images/Kurama.jpg'
+      'image': 'images/Kurama.jpg'
     }
   ],
   'Otogakure': [

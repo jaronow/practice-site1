@@ -1,4 +1,4 @@
-
+import '../css/style.css'
 // All The Data needed to create episode, character, and jutsu lists
 import {narutoEpisodes} from '../data/naruto-episodes.js'
 import {shippuudenEpisodes} from '../data/shippuuden-episodes.js'
