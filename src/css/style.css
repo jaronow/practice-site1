@@ -57,14 +57,22 @@ a:link,
 a:visited {
   text-decoration: none;
   color: white;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -o-transition: color .5s ease;
 }
 
 a:hover {
-  color: #bf1ce8;
+  color: rgb(101, 0, 184);
 }
 
 li {
   list-style: none;
+  transition: transform .5s ease;
+}
+
+li:hover {
+  transform: scale(1.2);
 }
 
 button[name="naruto"],
@@ -76,6 +84,9 @@ button[name="shippuuden"] {
   border: 2px solid rgb(36, 1, 92);
   border-radius: 5%;
   color: rgb(0, 247, 255);
+  -webkit-transition: background-color .5s ease, transform .5s ease;
+  -moz-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
 }
 
 button[name^="ns"],
@@ -86,13 +97,19 @@ button[name^="ss"] {
   border: 2px solid rgb(36, 1, 92);
   border-radius: 5%;
   color: rgb(0, 247, 255);
+  -webkit-transition: background-color .5s ease, transform .5s ease;
+  -moz-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
 }
 
 button[name^="n"]:hover,
 button[name^="s"]:hover,
-button[name^="p"]:hover {
+button[name^="p"]:hover,
+button[name$="-jutsu"]:hover,
+button[name$="-village"]:hover {
   cursor: pointer;
   background-color: rgb(101, 0, 184);
+  transform: scale(1.1);
 }
 
 button[name$="-jutsu"],
@@ -100,7 +117,10 @@ button[name$="-village"] {
   background-color: rgb(36, 1, 92);
   border: 2px solid rgb(36, 1, 92);
   border-radius: 5%;
-  color: rgb(0, 247, 255)
+  color: rgb(0, 247, 255);
+  -webkit-transition: background-color .5s ease, transform .5s ease;
+  -moz-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
 }
 
 #site-header {
@@ -231,6 +251,9 @@ button[name$="-village"] {
   border: 2px solid rgb(36, 1, 92);
   border-radius: 5%;
   color: rgb(0, 247, 255);
+  -webkit-transition: background-color .5s ease;
+  -moz-transition: background-color .5s ease;
+  -o-transition: background-color .5s ease;
 }
 
 #character-jutsu-side-nav-bar {
@@ -247,13 +270,16 @@ button[name$="-village"] {
   background-color: rgba(0,0,0,0);
   color: white;
   font-size: 1em;
+  -webkit-transition: background-color .5s ease;
+  -moz-transition: background-color .5s ease;
+  -o-transition: background-color .5s ease;
 }
 
-.character-jutsu-button:focus {
-  border: none;
-  outline: none;
+.character-jutsu-button:hover {
+  color: rgb(101, 0, 184);
 }
 
+.character-jutsu-button:focus,
 .character-jutsu-button::-moz-focus-inner {
   border: none;
   outline: none;
@@ -359,6 +385,7 @@ button[name$="-village"] {
 
 .character-image {
   height: 50px;
+  width: 50px;
 }
 
 .rank {
