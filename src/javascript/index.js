@@ -298,19 +298,19 @@ const villageSelectionButtons = document.querySelectorAll('[name$=-village]')
 villageSelectionButtons.forEach(button => button.addEventListener('click', createCharacterList))
 
 // function to chooose character or jutsu list to display
-function showMenu(event) {
+function showMenu() {
   switch(this.name){
     case 'jutsu':
     jutsuCharacterContainer.innerHTML = ''
     jutsuCharacterTitle.innerHTML = ''
-    villageSelection.classList.remove('characters-jutsu-active')
-    jutsuSelection.classList.add('characters-jutsu-active')
+    villageSelection.classList.remove('open')
+    jutsuSelection.classList.add('open')
     break;
     case 'characters':
     jutsuCharacterContainer.innerHTML = ''
     jutsuCharacterTitle.innerHTML = ''
-    jutsuSelection.classList.remove('characters-jutsu-active')
-    villageSelection.classList.add('characters-jutsu-active')
+    jutsuSelection.classList.remove('open')
+    villageSelection.classList.add('open')
     break;
   }
 }

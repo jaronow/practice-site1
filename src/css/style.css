@@ -104,9 +104,7 @@ button[name^="ss"] {
 
 button[name^="n"]:hover,
 button[name^="s"]:hover,
-button[name^="p"]:hover,
-button[name$="-jutsu"]:hover,
-button[name$="-village"]:hover {
+button[name^="p"]:hover {
   cursor: pointer;
   background-color: rgb(101, 0, 184);
   transform: scale(1.1);
@@ -120,7 +118,15 @@ button[name$="-village"] {
   color: rgb(0, 247, 255);
   -webkit-transition: background-color .5s ease, transform .5s ease;
   -moz-transition: background-color .5s ease, transform .5s ease;
-  -o-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease, margin .5s ease;
+}
+
+button[name$="-jutsu"]:hover,
+button[name$="-village"]:hover {
+  cursor: pointer;
+  background-color: rgb(101, 0, 184);
+  transform: scale(1.1);
+  margin: .3em;
 }
 
 #site-header {
@@ -328,27 +334,76 @@ button[name$="-village"] {
   display: flex;
 }
 
-.jutsu-selection {
+#jutsu-selection-container {
   display: none;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0
 }
 
+.jutsu-selection,
 .village-selection {
   display: none;
+  position: absolute;
+  visibility: hidden;
+  padding: 0;
+  opacity: 0;
+  -webkit-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -moz-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -o-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  animation: fadeOut 1s;
+}
+
+.jutsu-selection.open,
+.village-selection.open {
+  display: flex;
+  position: static;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -moz-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -o-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .jutsu-selection > li,
 .village-selection > li {
   padding: 0 .25em;
-}
-
-.characters-jutsu-active {
-  display: flex;
 }
 
 #character-jutsu-container-title {
@@ -362,6 +417,14 @@ button[name$="-village"] {
   align-items: center;
   text-align: center;
   line-height: 1.5em;
+}
+
+.character-jutsu-container-opening {
+
+}
+
+.character-jutsu-container-closing {
+
 }
 
 .jutsu {
