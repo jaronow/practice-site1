@@ -237,7 +237,7 @@ button[name$="-village"]:hover {
 }
 
 .active-series {
-  display: block !important;
+  display: block;
   position: static;
   visibility: visible;
   opacity: 1;
@@ -271,13 +271,27 @@ button[name$="-village"]:hover {
 }
 
 .season-table {
-  display: flex;
+  display: none;
+  position: absolute;
+  visibility: hidden;
   justify-content: center;
   margin-top: 1.5em;
+  opacity: 0;
+  transition:
+    opacity 750ms ease-in,
+    visibility 750ms ease-in;
+  animation: fadeOut 1000ms;
 }
 
-.active-table {
+.season-table.active-table {
   display: flex;
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  transition:
+    opacity 750ms ease-out,
+    visibility 750ms ease-out;
+  animation: fadeIn 1000ms;
 }
 
 #page-selection {

@@ -29,13 +29,13 @@ function showSeries() {
   switch(this.name) {
     case 'naruto':
     tablePageSelect.style.display = 'none'
-    seasonTable.innerHTML = ''
+    seasonTable.classList.remove('active-table')
     shippuudenEpSelect.classList.remove('active-series')
     narutoEpSelect.classList.add('active-series')
     break;
     case 'shippuuden':
     tablePageSelect.style.display = 'none'
-    seasonTable.innerHTML = ''
+    seasonTable.classList.remove('active-table')
     narutoEpSelect.classList.remove('active-series')
     shippuudenEpSelect.classList.add('active-series')
     break;
@@ -44,6 +44,7 @@ function showSeries() {
 
 // function that selects desired season
 function showSeason() {
+  seasonTable.classList.remove('active-table')
   let season = ''
   let seasonTitle =''
   switch(this.name) {
@@ -185,7 +186,7 @@ function showSeason() {
     case 'ss18':
     seasonTitle = 'Season 18'
     season = shippuudenEpisodes['Season 18']
-    createTable(seasonTitle, season)
+    createSeason(seasonTitle, season)
     break;
     case 'ss19':
     seasonTitle = 'Season 19'
@@ -278,6 +279,7 @@ function createTable() {
   currentPageInfo.innerHTML = `Page ${currentPage} of ${numOfPages}`
   const tableCaption = document.getElementById('season-number')
   tableCaption.innerHTML = seasonTitle
+  seasonTable.classList.add('active-table')
   tablePageSelect.style.display = 'flex'
 }
 
