@@ -28,15 +28,15 @@ seriesButtons.forEach(button => button.addEventListener('click', showSeries))
 function showSeries() {
   switch(this.name) {
     case 'naruto':
-    shippuudenEpSelect.classList.remove('active-series')
     tablePageSelect.style.display = 'none'
     seasonTable.innerHTML = ''
+    shippuudenEpSelect.classList.remove('active-series')
     narutoEpSelect.classList.add('active-series')
     break;
     case 'shippuuden':
-    narutoEpSelect.classList.remove('active-series')
     tablePageSelect.style.display = 'none'
     seasonTable.innerHTML = ''
+    narutoEpSelect.classList.remove('active-series')
     shippuudenEpSelect.classList.add('active-series')
     break;
   }

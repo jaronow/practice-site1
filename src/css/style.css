@@ -214,9 +214,44 @@ button[name$="-village"]:hover {
   align-items: center;
 }
 
-#naruto-episode-selection,
-#shippuuden-episode-selection {
+.inactive-series {
   display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -moz-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -o-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  animation: fadeOut 1s;
+}
+
+.active-series {
+  display: block !important;
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -moz-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -o-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  animation: fadeIn 1s;
 }
 
 .naruto-episodes,
@@ -324,10 +359,6 @@ button[name$="-village"]:hover {
 
 .bottom-nav-bar {
   border-top: 5px solid white;
-}
-
-.active-series {
-  display: block !important;
 }
 
 .active-table {
