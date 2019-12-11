@@ -4,8 +4,10 @@ body {
   background: linear-gradient(to bottom, rgb(3, 13, 143), rgb(27, 129, 224));
   font-family: 'Oxygen', sans-serif;
   font-size: 1.15em;
+  grid-template-columns: 15em 1fr 1fr;
+  grid-template-rows: auto;
   grid-row-gap: 2em;
-  grid-template:
+  grid-template-areas:
     "header header header"
     "main-pic main-pic main-pic"
     "about-side-nav about about"
@@ -268,10 +270,14 @@ button[name$="-village"]:hover {
   padding: .5em 0;
 }
 
-#season-table {
+.season-table {
   display: flex;
   justify-content: center;
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+
+.active-table {
+  display: flex;
 }
 
 #page-selection {
@@ -292,9 +298,9 @@ button[name$="-village"]:hover {
   border: 2px solid rgb(36, 1, 92);
   border-radius: 5%;
   color: rgb(0, 247, 255);
-  -webkit-transition: background-color .5s ease;
-  -moz-transition: background-color .5s ease;
-  -o-transition: background-color .5s ease;
+  -webkit-transition: background-color .5s ease, transform .5s ease;
+  -moz-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
 }
 
 #character-jutsu-side-nav-bar {
@@ -359,10 +365,6 @@ button[name$="-village"]:hover {
 
 .bottom-nav-bar {
   border-top: 5px solid white;
-}
-
-.active-table {
-  display: flex;
 }
 
 #jutsu-selection-container {
