@@ -5,7 +5,7 @@ body {
   font-family: 'Oxygen', sans-serif;
   font-size: 1.15em;
   grid-template-columns: 15em 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: minmax(0, 1fr);
   grid-row-gap: 2em;
   grid-template-areas:
     "header header header"
@@ -44,14 +44,14 @@ caption {
 }
 
 th {
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid rgb(36, 1, 92);
   text-align: center;
 }
 
 td {
   text-align: center;
   margin-top: 10px;
-  border: 3px solid black;
+  border: 3px solid rgb(36, 1, 92);
 }
 
 a,
@@ -120,7 +120,7 @@ button[name$="-village"] {
   color: rgb(0, 247, 255);
   -webkit-transition: background-color .5s ease, transform .5s ease;
   -moz-transition: background-color .5s ease, transform .5s ease;
-  -o-transition: background-color .5s ease, transform .5s ease, margin .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
 }
 
 button[name$="-jutsu"]:hover,
@@ -128,8 +128,9 @@ button[name$="-village"]:hover {
   cursor: pointer;
   background-color: rgb(101, 0, 184);
   transform: scale(1.1);
-  margin: .3em;
 }
+
+/* Header Section */
 
 #site-header {
   display: flex;
@@ -151,23 +152,42 @@ button[name$="-village"]:hover {
   justify-content: space-around;
 }
 
+/* Side-Nav Bars */
+
 #about-side-nav-bar {
   display: flex;
+  position: relative;
   grid-area: about-side-nav;
   align-items: flex-end;
 }
 
-.side-nav-links {
+#episode-side-nav-bar {
   display: flex;
-  flex-direction: column;
-  padding: 0 0 5em 0;
+  position: relative;
+  grid-area: episode-side-nav;
+  align-items: flex-end;
+}
+
+#character-jutsu-side-nav-bar {
+  display: flex;
+  position: relative;
+  grid-area: character-jutsu-side-nav;
+  align-items: flex-end;
+}
+
+.side-nav-links {
+  position: absolute;
+  top: 50%;
   width: 100%;
-  align-items: center;
+  padding: 0 0 1em 0;
 }
 
 .side-nav-links > li {
-  padding: 1.5em 0;
+  padding: 1em 0;
+  text-align: center;
 }
+
+/* About Section */
 
 #about {
   grid-area: about;
@@ -184,11 +204,7 @@ button[name$="-village"]:hover {
   text-align: center;
 }
 
-#episode-side-nav-bar {
-  display: flex;
-  grid-area: episode-side-nav;
-  align-items: flex-end;
-}
+/* Episode Section */
 
 #episodes {
   grid-area: episodes;
@@ -317,11 +333,7 @@ button[name$="-village"]:hover {
   -o-transition: background-color .5s ease, transform .5s ease;
 }
 
-#character-jutsu-side-nav-bar {
-  display: flex;
-  grid-area: character-jutsu-side-nav;
-  align-items: flex-end;
-}
+/* Character-Jutsu Side-Nav Select Buttons */
 
 .character-jutsu-button {
   width: 10em;
@@ -346,39 +358,11 @@ button[name$="-village"]:hover {
   outline: none;
 }
 
+/* Character-Jutsu Section */
+
 #characters-jutsu {
   grid-area: characters;
   padding: 1.5em 0;
-}
-
-.character-list-title {
-  text-align: center;
-  border-bottom: 1px dashed white;
-  padding-bottom: .75em;
-}
-
-.character-jutsu-list {
-  display: flex;
-  padding: 0 2em 0 0;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-}
-
-#site-footer {
-  grid-area: footer;
-}
-
-.pic-note {
-  text-align: center;
-}
-
-.copyright {
-  margin-left: .4em;
-}
-
-.bottom-nav-bar {
-  border-top: 5px solid white;
 }
 
 #jutsu-selection-container {
@@ -430,48 +414,41 @@ button[name$="-village"]:hover {
   animation: fadeIn 1s;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.jutsu-selection > li,
-.village-selection > li {
-  padding: 0 .25em;
+.character-list-title {
+  text-align: center;
+  border-bottom: 1px dashed white;
+  padding-bottom: .75em;
 }
 
 #character-jutsu-container-title {
   text-align: center;
 }
 
-#character-jutsu-container{
-  display: flex;
+.character-jutsu-container{
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   text-align: center;
   line-height: 1.5em;
+  transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  animation: fadeOut 1000ms;
 }
 
-.character-jutsu-container-opening {
-
-}
-
-.character-jutsu-container-closing {
-
+.character-jutsu-container.active-container {
+  display: flex;
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  animation: fadeIn 1000ms;
 }
 
 .jutsu {
@@ -500,4 +477,50 @@ button[name$="-village"]:hover {
 
 .rank {
   font-size: .75em;
+}
+
+.character-jutsu-list {
+  display: flex;
+  padding: 0 2em 0 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Footer Section */
+
+#site-footer {
+  grid-area: footer;
+}
+
+.pic-note {
+  text-align: center;
+}
+
+.copyright {
+  margin-left: .4em;
+}
+
+.bottom-nav-bar {
+  border-top: 5px solid white;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

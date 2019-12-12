@@ -319,6 +319,7 @@ function showMenu() {
 
 //function that creates list of selected jutsu
 function createJutsuList() {
+  jutsuCharacterContainer.classList.remove('active-container')
   let jutsuList = ''
   let jutsuTitle = ''
   switch(this.name) {
@@ -397,6 +398,7 @@ function createJutsuList() {
 
 // function that creates list of chosen characters
 function createCharacterList() {
+  jutsuCharacterContainer.classList.remove('active-container')
   let villageName = ''
   let characterList = ''
   switch(this.name) {
@@ -453,10 +455,12 @@ function createCharacterList() {
 function createJutsuTemplate(title, list) {
   jutsuCharacterTitle.innerHTML = title
   jutsuCharacterContainer.innerHTML = jutsuTemplate(list)
+  jutsuCharacterContainer.classList.add('active-container')
 }
 
 // function that creates list of characters using character-template.hbs
 function createCharacterTemplate(village, characters) {
   jutsuCharacterTitle.innerHTML = village
   jutsuCharacterContainer.innerHTML = characterTemplate(characters)
+  jutsuCharacterContainer.classList.add('active-container')
 }
