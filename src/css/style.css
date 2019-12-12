@@ -61,7 +61,9 @@ a:visited {
   color: white;
   -webkit-transition: color .5s ease;
   -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
   -o-transition: color .5s ease;
+  transition: color .5s ease;
 }
 
 a:hover {
@@ -70,64 +72,23 @@ a:hover {
 
 li {
   list-style: none;
+  -webkit-transition: transform .5s ease;
+  -moz-transition: transform .5s ease;
+  -ms-transition: transform .5s ease;
+  -o-transition: transform .5s ease;
   transition: transform .5s ease;
 }
 
 li:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
   transform: scale(1.2);
 }
 
-button[name="naruto"],
-button[name="shippuuden"] {
-  height: 3em;
-  width: 8em;
-  margin: 0 .75em;
-  background-color: rgb(36, 1, 92);
-  border: 2px solid rgb(36, 1, 92);
-  border-radius: 5%;
-  color: rgb(0, 247, 255);
-  -webkit-transition: background-color .5s ease, transform .5s ease;
-  -moz-transition: background-color .5s ease, transform .5s ease;
-  -o-transition: background-color .5s ease, transform .5s ease;
-}
-
-button[name^="ns"],
-button[name^="ss"] {
+li > button {
   margin: .25em;
-  padding: .25em .5em;
-  background-color: rgb(36, 1, 92);
-  border: 2px solid rgb(36, 1, 92);
-  border-radius: 5%;
-  color: rgb(0, 247, 255);
-  -webkit-transition: background-color .5s ease, transform .5s ease;
-  -moz-transition: background-color .5s ease, transform .5s ease;
-  -o-transition: background-color .5s ease, transform .5s ease;
-}
-
-button[name^="n"]:hover,
-button[name^="s"]:hover,
-button[name^="p"]:hover {
-  cursor: pointer;
-  background-color: rgb(101, 0, 184);
-  transform: scale(1.1);
-}
-
-button[name$="-jutsu"],
-button[name$="-village"] {
-  background-color: rgb(36, 1, 92);
-  border: 2px solid rgb(36, 1, 92);
-  border-radius: 5%;
-  color: rgb(0, 247, 255);
-  -webkit-transition: background-color .5s ease, transform .5s ease;
-  -moz-transition: background-color .5s ease, transform .5s ease;
-  -o-transition: background-color .5s ease, transform .5s ease;
-}
-
-button[name$="-jutsu"]:hover,
-button[name$="-village"]:hover {
-  cursor: pointer;
-  background-color: rgb(101, 0, 184);
-  transform: scale(1.1);
 }
 
 /* Header Section */
@@ -204,7 +165,59 @@ button[name$="-village"]:hover {
   text-align: center;
 }
 
+.about-button {
+  width: 10em;
+  height: 5em;
+  border-style: none;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-size: 1em;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+.about-button:hover {
+  color: rgb(101, 0, 184);
+}
+
+.about-button:focus,
+.about-button::-moz-focus-inner{
+  color: rgb(101, 0, 184);
+  border: none;
+  outline: none;
+}
+
 /* Episode Section */
+
+.episode-guide {
+  width: 10em;
+  height: 5em;
+  border-style: none;
+  cursor: pointer;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  font-size: 1em;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
+}
+
+.episode-guide:hover {
+  color: rgb(101, 0, 184);
+}
+
+.episode-guide:focus,
+.episode-guide::-moz-focus-inner{
+  color: rgb(101, 0, 184);
+  border: none;
+  outline: none;
+}
 
 #episodes {
   grid-area: episodes;
@@ -213,6 +226,51 @@ button[name$="-village"]:hover {
 
 .episode-list {
   text-align: center;
+}
+
+/* Series and Season selection buttons */
+
+button[name="naruto"],
+button[name="shippuuden"] {
+  height: 3em;
+  width: 8em;
+  margin: 0 .75em;
+  background-color: rgb(36, 1, 92);
+  border: 2px solid rgb(36, 1, 92);
+  border-radius: 5%;
+  color: rgb(0, 247, 255);
+  -webkit-transition: background-color .5s ease, transform .5s ease;
+  -moz-transition: background-color .5s ease, transform .5s ease;
+  -ms-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
+  transition: background-color .5s ease, transform .5s ease;
+}
+
+button[name^="ns"],
+button[name^="ss"] {
+  margin: .25em;
+  padding: .25em .5em;
+  background-color: rgb(36, 1, 92);
+  border: 2px solid rgb(36, 1, 92);
+  border-radius: 5%;
+  color: rgb(0, 247, 255);
+  -webkit-transition: background-color .5s ease, transform .5s ease;
+  -moz-transition: background-color .5s ease, transform .5s ease;
+  -ms-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
+  transition: background-color .5s ease, transform .5s ease;
+}
+
+button[name^="n"]:hover,
+button[name^="s"]:hover,
+button[name^="p"]:hover {
+  cursor: pointer;
+  background-color: rgb(101, 0, 184);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .series-selection {
@@ -243,6 +301,9 @@ button[name$="-village"]:hover {
   -moz-transition:
     opacity 500ms ease-in,
     visibility 500ms ease-in;
+  -ms-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
   -o-transition:
     opacity 500ms ease-in,
     visibility 500ms ease-in;
@@ -261,6 +322,9 @@ button[name$="-village"]:hover {
     opacity 500ms ease-out,
     visibility 500ms ease-out;
   -moz-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -ms-transition:
     opacity 500ms ease-out,
     visibility 500ms ease-out;
   -o-transition:
@@ -293,6 +357,18 @@ button[name$="-village"]:hover {
   justify-content: center;
   margin-top: 1.5em;
   opacity: 0;
+  -webkit-transition:
+    opacity 750ms ease-in,
+    visibility 750ms ease-in;
+  -moz-transition:
+    opacity 750ms ease-in,
+    visibility 750ms ease-in;
+  -ms-transition:
+    opacity 750ms ease-in,
+    visibility 750ms ease-in;
+  -o-transition:
+    opacity 750ms ease-in,
+    visibility 750ms ease-in;
   transition:
     opacity 750ms ease-in,
     visibility 750ms ease-in;
@@ -304,11 +380,26 @@ button[name$="-village"]:hover {
   position: static;
   visibility: visible;
   opacity: 1;
+  -webkit-transition:
+    opacity 750ms ease-out,
+    visibility 750ms ease-out;
+  -moz-transition:
+    opacity 750ms ease-out,
+    visibility 750ms ease-out;
+  -ms-transition:
+    opacity 750ms ease-out,
+    visibility 750ms ease-out;
+  -o-transition:
+    opacity 750ms ease-out,
+    visibility 750ms ease-out;
   transition:
     opacity 750ms ease-out,
     visibility 750ms ease-out;
   animation: fadeIn 1000ms;
 }
+
+/* Season Table Pagination Buttons
+Pagination hover styling up with season selection styling */
 
 #page-selection {
   display: none;
@@ -330,7 +421,9 @@ button[name$="-village"]:hover {
   color: rgb(0, 247, 255);
   -webkit-transition: background-color .5s ease, transform .5s ease;
   -moz-transition: background-color .5s ease, transform .5s ease;
+  -ms-transition: background-color .5s ease, transform .5s ease;
   -o-transition: background-color .5s ease, transform .5s ease;
+  transition: background-color .5s ease, transform .5s ease;
 }
 
 /* Character-Jutsu Side-Nav Select Buttons */
@@ -343,9 +436,11 @@ button[name$="-village"]:hover {
   background-color: rgba(0,0,0,0);
   color: white;
   font-size: 1em;
-  -webkit-transition: background-color .5s ease;
-  -moz-transition: background-color .5s ease;
-  -o-transition: background-color .5s ease;
+  -webkit-transition: color .5s ease;
+  -moz-transition: color .5s ease;
+  -ms-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease;
 }
 
 .character-jutsu-button:hover {
@@ -354,8 +449,35 @@ button[name$="-village"]:hover {
 
 .character-jutsu-button:focus,
 .character-jutsu-button::-moz-focus-inner {
+  color: rgb(101, 0, 184);
   border: none;
   outline: none;
+}
+
+/* Individual Jutsu and Village Selection from side-nav */
+
+button[name$="-jutsu"],
+button[name$="-village"] {
+  background-color: rgb(36, 1, 92);
+  border: 2px solid rgb(36, 1, 92);
+  border-radius: 5%;
+  color: rgb(0, 247, 255);
+  -webkit-transition: background-color .5s ease, transform .5s ease;
+  -moz-transition: background-color .5s ease, transform .5s ease;
+  -ms-transition: background-color .5s ease, transform .5s ease;
+  -o-transition: background-color .5s ease, transform .5s ease;
+  transition: background-color .5s ease, transform .5s ease;
+}
+
+button[name$="-jutsu"]:hover,
+button[name$="-village"]:hover {
+  cursor: pointer;
+  background-color: rgb(101, 0, 184);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 /* Character-Jutsu Section */
@@ -382,6 +504,9 @@ button[name$="-village"]:hover {
   -moz-transition:
     opacity 500ms ease-in,
     visibility 500ms ease-in;
+  -ms-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
   -o-transition:
     opacity 500ms ease-in,
     visibility 500ms ease-in;
@@ -403,6 +528,9 @@ button[name$="-village"]:hover {
     opacity 500ms ease-out,
     visibility 500ms ease-out;
   -moz-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -ms-transition:
     opacity 500ms ease-out,
     visibility 500ms ease-out;
   -o-transition:
@@ -434,6 +562,18 @@ button[name$="-village"]:hover {
   align-items: center;
   text-align: center;
   line-height: 1.5em;
+  -webkit-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -moz-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -ms-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -o-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
   transition:
     opacity 500ms ease-in,
     visibility 500ms ease-in;
@@ -445,6 +585,18 @@ button[name$="-village"]:hover {
   position: static;
   visibility: visible;
   opacity: 1;
+  -webkit-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -moz-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -ms-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -o-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
   transition:
     opacity 500ms ease-out,
     visibility 500ms ease-out;
