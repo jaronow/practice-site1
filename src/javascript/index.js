@@ -339,7 +339,8 @@ function showMenu() {
 }
 
 //function that creates list of selected jutsu
-function createJutsuList() {
+function createJutsuList(e) {
+  e.preventDefault()
   jutsuCharacterContainer.classList.remove('active-container')
   let jutsuList = ''
   let jutsuTitle = ''
@@ -418,7 +419,8 @@ function createJutsuList() {
 }
 
 // function that creates list of chosen characters
-function createCharacterList() {
+function createCharacterList(e) {
+  e.preventDefault()
   jutsuCharacterContainer.classList.remove('active-container')
   let villageName = ''
   let characterList = ''
