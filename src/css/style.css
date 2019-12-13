@@ -587,7 +587,7 @@ button[name$="-village"]:hover {
 
 .character-jutsu-basics-title {
   text-align: center;
-  border-bottom: 1px dashed white;
+  border-bottom: 3px dashed white;
   padding-bottom: .75em;
 }
 
@@ -602,6 +602,8 @@ button[name$="-village"]:hover {
 
 #character-jutsu-container-title {
   text-align: center;
+  border-bottom: 3px dashed white;
+  padding-bottom: .75em;
 }
 
 .character-jutsu-container{
@@ -671,12 +673,15 @@ button[name$="-village"]:hover {
 .characters {
   border: 3px solid white;
   width: 15em;
-  height: 10em;
+  height: 15em;
+  margin: .5em 0;
+  padding: 0 .25em;
 }
 
 .character-image {
-  height: 50px;
-  width: 50px;
+  height: 125px;
+  width: 125px;
+  padding: .5em 0;
 }
 
 .rank {

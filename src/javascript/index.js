@@ -59,7 +59,8 @@ function showSeries() {
 }
 
 // function that selects desired season
-function showSeason() {
+function showSeason(e) {
+  e.preventDefault()
   seasonTable.classList.remove('active-table')
   let season = ''
   let seasonTitle =''
