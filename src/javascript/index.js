@@ -1,7 +1,8 @@
 // Import styling for webpack to build
 import '../css/style.css'
 
-// All The Data needed to create episode, character, and jutsu lists
+// All The Data needed to create general info, episode, character, and jutsu lists
+import {generalInfo} from '../data/general-info.js'
 import {narutoEpisodes} from '../data/naruto-episodes.js'
 import {shippuudenEpisodes} from '../data/shippuuden-episodes.js'
 import {characters} from '../data/characters.js'
@@ -11,6 +12,21 @@ import {jutsu} from '../data/jutsu.js'
 const jutsuTemplate = require('./templates/jutsu-template.hbs')
 const characterTemplate = require('./templates/character-template.hbs')
 const episodeTempate = require('./templates/episode-template.hbs')
+const infoTemplate = require('./templates/about-template.hbs')
+const basicInfoTemplate = require('./templates/basic-character-jutsu-template.hbs')
+
+// Load General Info initally to not have blank about/character section
+
+window.addEventListener('DOMContentLoaded', function() {
+  const info = generalInfo['About']
+  const basicInfo = generalInfo['character-jutsu']
+  const currentInfoButton = document.querySelector('[name="about-general"]')
+  const currentBasicInfoButton = document.querySelector('[name="basic-info"]')
+  createInfoTemplate(info)
+  createBasicInfoTemplate(basicInfo)
+  currentInfoButton.focus()
+  currentBasicInfoButton.focus()
+})
 
 // Elements and Event Listeners used in creating episode tables
 const narutoEpSelect = document.getElementById('naruto-episode-selection')
@@ -286,6 +302,7 @@ function createTable() {
 // elements used in creating character and jutsu lists
 const villageSelection = document.querySelector('.village-selection')
 const jutsuSelection = document.querySelector('.jutsu-selection')
+const basicInfoContainer = document.getElementById('character-jutsu-basics')
 const jutsuCharacterContainer = document.getElementById('character-jutsu-container')
 const jutsuCharacterTitle = document.getElementById('character-jutsu-container-title')
 
@@ -303,16 +320,19 @@ villageSelectionButtons.forEach(button => button.addEventListener('click', creat
 function showMenu() {
   switch(this.name){
     case 'jutsu':
-    jutsuCharacterContainer.innerHTML = ''
-    jutsuCharacterTitle.innerHTML = ''
     villageSelection.classList.remove('open')
     jutsuSelection.classList.add('open')
     break;
     case 'characters':
+    jutsuSelection.classList.remove('open')
+    villageSelection.classList.add('open')
+    break;
+    case 'basic-info':
     jutsuCharacterContainer.innerHTML = ''
     jutsuCharacterTitle.innerHTML = ''
     jutsuSelection.classList.remove('open')
-    villageSelection.classList.add('open')
+    villageSelection.classList.remove('open')
+    createBasicInfoTemplate(generalInfo['character-jutsu'])
     break;
   }
 }
@@ -455,6 +475,7 @@ function createCharacterList() {
 function createJutsuTemplate(title, list) {
   jutsuCharacterTitle.innerHTML = title
   jutsuCharacterContainer.innerHTML = jutsuTemplate(list)
+  basicInfoContainer.classList.remove('open')
   jutsuCharacterContainer.classList.add('active-container')
 }
 
@@ -462,5 +483,46 @@ function createJutsuTemplate(title, list) {
 function createCharacterTemplate(village, characters) {
   jutsuCharacterTitle.innerHTML = village
   jutsuCharacterContainer.innerHTML = characterTemplate(characters)
+  basicInfoContainer.classList.remove('open')
   jutsuCharacterContainer.classList.add('active-container')
+}
+
+// function that creates basic info for character/jutsu section
+function createBasicInfoTemplate(info) {
+  basicInfoContainer.innerHTML = basicInfoTemplate(info)
+  jutsuCharacterContainer.classList.remove('active-container')
+  basicInfoContainer.classList.add('open')
+}
+
+// Elements And Event Listeners for creating About Section Content
+
+const infoBox = document.getElementById('general-info')
+const infoButtons = document.querySelectorAll('.about-button')
+
+infoButtons.forEach(button => button.addEventListener('click', getInfo))
+
+function getInfo() {
+  let info = ''
+  switch(this.name) {
+    case 'about-general':
+    info = generalInfo['About']
+    createInfoTemplate(info)
+    break;
+    case 'about-naruto':
+    info = generalInfo['Naruto']
+    createInfoTemplate(info)
+    break;
+    case 'about-shippuuden':
+    info = generalInfo['Shippuuden']
+    createInfoTemplate(info)
+    break;
+    case 'about-boruto':
+    info = generalInfo['Boruto']
+    createInfoTemplate(info)
+    break;
+  }
+}
+
+function createInfoTemplate(info) {
+  infoBox.innerHTML = infoTemplate(info)
 }

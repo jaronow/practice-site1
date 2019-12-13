@@ -487,8 +487,51 @@ button[name$="-village"]:hover {
   padding: 1.5em 0;
 }
 
-#jutsu-selection-container {
+.character-jutsu-basics {
   display: none;
+  position: absolute;
+  visibility: hidden;
+  padding: 0;
+  opacity: 0;
+  -webkit-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -moz-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -ms-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  -o-transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  transition:
+    opacity 500ms ease-in,
+    visibility 500ms ease-in;
+  animation: fadeOut 1s;
+}
+
+.character-jutsu-basics.open {
+  display: block;
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -moz-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -ms-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  -o-transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  transition:
+    opacity 500ms ease-out,
+    visibility 500ms ease-out;
+  animation: fadeIn 1s;
 }
 
 .jutsu-selection,
@@ -542,10 +585,19 @@ button[name$="-village"]:hover {
   animation: fadeIn 1s;
 }
 
-.character-list-title {
+.character-jutsu-basics-title {
   text-align: center;
   border-bottom: 1px dashed white;
   padding-bottom: .75em;
+}
+
+.character-basic-title,
+.jutsu-basic-title {
+  text-align: center;
+}
+
+.jutsu-basic-title-span {
+  font-size: .75em;
 }
 
 #character-jutsu-container-title {

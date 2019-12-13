@@ -1,0 +1,13 @@
+{{#each this}}
+<h2 id="about-title">{{title}}</h2>
+<p class="about-text">
+  {{part1}}
+</p>
+<p class="about-text">
+  {{part2}}
+  {{#if link}}
+  <a href="{{link}}" target="_blank">{{{linkInfo}}}</a>
+  {{part3}}
+  {{/if}}
+</p>
+{{/each}}
