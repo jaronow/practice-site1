@@ -409,21 +409,123 @@ Pagination hover styling up with season selection styling */
   margin-top: .5em;
 }
 
-.page-selection-buttons {
+#pagination-buttons {
+  position: relative;
   display: flex;
 }
 
-.table-page {
-  margin: .5em 1em;
-  background-color: rgb(36, 1, 92);
-  border: 2px solid rgb(36, 1, 92);
-  border-radius: 5%;
-  color: rgb(0, 247, 255);
-  -webkit-transition: background-color .5s ease, transform .5s ease;
-  -moz-transition: background-color .5s ease, transform .5s ease;
-  -ms-transition: background-color .5s ease, transform .5s ease;
-  -o-transition: background-color .5s ease, transform .5s ease;
-  transition: background-color .5s ease, transform .5s ease;
+#line-1 {
+  position: relative;
+  height: 3px;
+  width: 250px;
+  background-color: #4D565B;
+}
+
+#line-1.right::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  height: 3px;
+  background-color: #589CF7;
+  animation-name: left-to-right;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#line-1.left::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  height: 3px;
+  background-color: #589CF7;
+  animation-name: right-to-left;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#line-1 .circle-right,
+#line-1 .circle-left {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #4D565B;
+  cursor: pointer;
+  background-color: #2A3436;
+  transition: all .3s ease;
+  z-index: 5;
+}
+#line-1 .circle-right {
+  right: calc(-15px - 3px);
+}
+#line-1 .circle-right ::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: #2A3436;
+}
+#line-1 .circle-right.active {
+  width: 90px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: #589CF7;
+  transition: all .3s ease;
+}
+#line-1 .circle-right.show::after {
+  content: 'Second';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: #fff;
+}
+#line-1 .circle-left {
+  left: calc(-15px - 3px);
+}
+#line-1 .circle-left ::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: #2A3436;
+}
+#line-1 .circle-left.active {
+  width: 90px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: #589CF7;
+  transition: all .3s ease;
+}
+#line-1 .circle-left.show::after {
+  content: 'First';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: #fff;
 }
 
 /* Character-Jutsu Side-Nav Select Buttons */
@@ -760,4 +862,31 @@ button[name$="-village"]:hover {
     50% {
         border-color: rgb(143, 40, 184)
     }
+}
+
+@keyframes left-to-right {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    width: 35%;
+  }
+  100% {
+    left: 100%;
+    width: 0%;
+  }
+}
+@keyframes right-to-left {
+  0% {
+    right: 0;
+    width: 0%;
+  }
+  50% {
+    width: 35%;
+  }
+  100% {
+    right: 100%;
+    width: 0%;
+  }
 }

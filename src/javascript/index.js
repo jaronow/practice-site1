@@ -14,6 +14,7 @@ const characterTemplate = require('./templates/character-template.hbs')
 const episodeTempate = require('./templates/episode-template.hbs')
 const infoTemplate = require('./templates/about-template.hbs')
 const basicInfoTemplate = require('./templates/basic-character-jutsu-template.hbs')
+const paginationTemplate = require('./templates/table-pagination-buttons.hbs')
 
 // Load General Info initally to not have blank about/character section
 
@@ -235,11 +236,14 @@ let seasonTitle = new Array()
 let currentPage = 1
 const numPerPage = 10
 let numOfPages = 1
+let paginationInfo = new Object()
 const currentPageInfo = document.getElementById('current-page')
+const paginationButtonsContainer = document.getElementById('pagination-buttons')
 
 //event listener for pagination buttons
-const pageButtons = document.querySelectorAll('.table-page')
-pageButtons.forEach(button => button.addEventListener('click', changePage))
+const paginationLines = document.querySelectorAll('[id^=line-]')
+const paginationButtons = document.querySelectorAll('[id^=Handle-]')
+paginationButtons.forEach(button => button.addEventListener('click', changePage))
 
 // functions that creates the desired season episode table
 function createSeason(title, season) {
@@ -252,7 +256,60 @@ function createSeason(title, season) {
 //function that gets total # of pages for pagination
 function getNumOfPages() {
   numOfPages = Math.ceil((episodeList.length - 1) / numPerPage)
+  createPaginationInfo()
   createEpisodeList()
+}
+
+// function to create info needed for pagination template
+
+function createPaginationInfo() {
+  console.log(numOfPages)
+  switch(numOfPages) {
+    case 1:
+    paginationInfo = {
+      'line-1': '1',
+      'line-2': '',
+      'line-3': '',
+      'handle-1': '1',
+      'handle-2': '',
+      'handle-3': '',
+      'handle-4': ''
+    }
+    break;
+    case 2:
+    paginationInfo = {
+      'line-1': '1',
+      'line-2': '',
+      'line-3': '',
+      'handle-1': '1',
+      'handle-2': '2',
+      'handle-3': '',
+      'handle-4': ''
+    }
+    break;
+    case 3:
+    paginationInfo = {
+      'line-1': '1',
+      'line-2': '2',
+      'line-3': '',
+      'handle-1': '1',
+      'handle-2': '2',
+      'handle-3': '3',
+      'handle-4': ''
+    }
+    break;
+    case 4:
+    paginationInfo = {
+      'line-1': '1',
+      'line-2': '2',
+      'line-3': '3',
+      'handle-1': '1',
+      'handle-2': '2',
+      'handle-3': '3',
+      'handle-4': '4'
+    }
+    break;
+  }
 }
 
 //functions to change pages of table
@@ -290,12 +347,13 @@ function createEpisodeList() {
   createTable()
 }
 
-// function that uses episode-template.hbs to create actual table
+// function that uses episode-template.hbs & pagination-template to create actual table w/ buttons
 function createTable() {
   seasonTable.innerHTML = episodeTempate(episodes)
   currentPageInfo.innerHTML = `Page ${currentPage} of ${numOfPages}`
   const tableCaption = document.getElementById('season-number')
   tableCaption.innerHTML = seasonTitle
+  paginationButtonsContainer.innerHTML = paginationTemplate(paginationInfo)
   seasonTable.classList.add('active-table')
   tablePageSelect.style.display = 'flex'
 }
