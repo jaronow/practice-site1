@@ -45,12 +45,14 @@ seriesButtons.forEach(button => button.addEventListener('click', showSeries))
 function showSeries() {
   switch(this.name) {
     case 'naruto':
+    paginationButtonsContainer.innerHTML = ''
     tablePageSelect.style.display = 'none'
     seasonTable.classList.remove('active-table')
     shippuudenEpSelect.classList.remove('active-series')
     narutoEpSelect.classList.add('active-series')
     break;
     case 'shippuuden':
+    paginationButtonsContainer.innerHTML = ''
     tablePageSelect.style.display = 'none'
     seasonTable.classList.remove('active-table')
     narutoEpSelect.classList.remove('active-series')
@@ -63,6 +65,7 @@ function showSeries() {
 function showSeason(e) {
   e.preventDefault()
   seasonTable.classList.remove('active-table')
+  paginationButtonsContainer.innerHTML = ''
   let season = ''
   let seasonTitle =''
   switch(this.name) {
@@ -241,10 +244,53 @@ const currentPageInfo = document.getElementById('current-page')
 const paginationButtonsContainer = document.getElementById('pagination-buttons')
 
 //event listener for pagination buttons
-const paginationLines = document.querySelectorAll('[id^=line-]')
-const paginationButtons = document.querySelectorAll('[id^=Handle-]')
-paginationButtons.forEach(button => button.addEventListener('click', changePage))
+let paginationLine1 = ''
+let paginationLine2 = ''
+let paginationLine3 = ''
+let paginationHandle1 = ''
+let paginationHandle2 = ''
+let paginationHandle3 = ''
+paginationButtonsContainer.addEventListener('click', function(event) {
+  console.log(event.target.id)
+  switch (event.target.id) {
+    case 'Handle-1':
+    paginationLine1.classList.remove('right')
+    paginationLine1.classList.add('left')
+    if (!event.target.classList.contains('active')) {
+      paginationHandle2.classList.remove('active', 'show')
 
+      setTimeout( () => {
+        event.target.classList.add('active')
+      },300)
+
+      setTimeout( () => {
+        event.target.classList.add('show')
+      },600)
+    }
+    previousPage()
+    return
+    break;
+    case 'Handle-2':
+    paginationLine1.classList.remove('left')
+    paginationLine1.classList.add('right')
+    if (!event.target.classList.contains('active')) {
+      paginationHandle1.classList.remove('active', 'show')
+
+      setTimeout( () => {
+        event.target.classList.add('active')
+      },300)
+
+      setTimeout( () => {
+        event.target.classList.add('show')
+      },600)
+    }
+    nextPage()
+    break;
+    default:
+    return
+    break;
+  }
+})
 // functions that creates the desired season episode table
 function createSeason(title, season) {
   currentPage = 1
@@ -257,25 +303,16 @@ function createSeason(title, season) {
 function getNumOfPages() {
   numOfPages = Math.ceil((episodeList.length - 1) / numPerPage)
   createPaginationInfo()
+  if (numOfPages > 1) {
+    createPagination()
+  }
   createEpisodeList()
 }
 
 // function to create info needed for pagination template
 
 function createPaginationInfo() {
-  console.log(numOfPages)
   switch(numOfPages) {
-    case 1:
-    paginationInfo = {
-      'line-1': '1',
-      'line-2': '',
-      'line-3': '',
-      'handle-1': '1',
-      'handle-2': '',
-      'handle-3': '',
-      'handle-4': ''
-    }
-    break;
     case 2:
     paginationInfo = {
       'line-1': '1',
@@ -309,12 +346,25 @@ function createPaginationInfo() {
       'handle-4': '4'
     }
     break;
+    default:
+    return
+    break;
   }
 }
 
+function createPagination() {
+  paginationButtonsContainer.innerHTML = paginationTemplate(paginationInfo)
+  paginationLine1 = document.getElementById('line-1')
+  paginationLine2 = document.getElementById('line-2')
+  paginationLine3 = document.getElementById('line-3')
+  paginationHandle1 = document.getElementById('Handle-1')
+  paginationHandle2 = document.getElementById('Handle-2')
+  paginationHandle3 = document.getElementById('Handle-3')
+}
+
 //functions to change pages of table
-function changePage() {
-  switch(this.name) {
+function changePage(action) {
+  switch(action) {
     case 'next': nextPage()
     break;
     case 'previous': previousPage()
@@ -353,7 +403,6 @@ function createTable() {
   currentPageInfo.innerHTML = `Page ${currentPage} of ${numOfPages}`
   const tableCaption = document.getElementById('season-number')
   tableCaption.innerHTML = seasonTitle
-  paginationButtonsContainer.innerHTML = paginationTemplate(paginationInfo)
   seasonTable.classList.add('active-table')
   tablePageSelect.style.display = 'flex'
 }

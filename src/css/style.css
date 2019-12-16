@@ -482,7 +482,7 @@ Pagination hover styling up with season selection styling */
   transition: all .3s ease;
 }
 #line-1 .circle-right.show::after {
-  content: 'Second';
+  content: 'Page 2';
   position: absolute;
   top: 0;
   right: 0;
@@ -516,7 +516,7 @@ Pagination hover styling up with season selection styling */
   transition: all .3s ease;
 }
 #line-1 .circle-left.show::after {
-  content: 'First';
+  content: 'Page 1';
   position: absolute;
   top: 0;
   right: 0;

@@ -1,16 +1,22 @@
 <div id="line-{{line-1}}" class="left">
-  <div class="circle-right" id="Handle-{{handle-1}}"></div>
-  {{#if handle-2}}
-  <div class="circle-left active show" id="Handle-{{handle-2}}"></div>
-  {{/if}}
+  <div class="circle-left active show" id="Handle-{{handle-1}}"></div>
+  <div class="circle-right" id="Handle-{{handle-2}}"></div>
 </div>
 {{#if line-2}}
 <div id="line-{{line-2}}" class="">
+  <div class="circle-left" id="Handle-{{handle-2}}"></div>
   <div class="circle-right" id="Handle-{{handle-3}}"></div>
 </div>
 {{/if}}
 {{#if line-3}}
-<div class="" id="line-{{line-3}}">
+<div id="line-{{line-3}}" class="">
+  <div class="circle-left" id="Handle-{{handle-3}}"></div>
+  <div class="circle-right" id="Handle-{{handle-4}}"></div>
+</div>
+{{/if}}
+{{#if line-4}}
+<div id="line-{{line-4}}" class="">
   <div class="circle-left" id="Handle-{{handle-4}}"></div>
+  <div class="circle-right" id="Handle-{{handle-5}}"></div>
 </div>
 {{/if}}
