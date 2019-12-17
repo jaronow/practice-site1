@@ -406,7 +406,7 @@ Pagination hover styling up with season selection styling */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: .5em;
+  margin-top: 1.6em;
 }
 
 #pagination-buttons {
@@ -420,7 +420,7 @@ Pagination hover styling up with season selection styling */
   position: relative;
   height: 3px;
   width: 250px;
-  background-color: #4D565B;
+  background-color: rgb(21, 2, 70);
 }
 
 #line-1.right::after {
@@ -428,7 +428,7 @@ Pagination hover styling up with season selection styling */
   position: absolute;
   left: 3px;
   height: 3px;
-  background-color: #589CF7;
+  background-color: rgb(88, 157, 244);
   animation-name: left-to-right;
   animation-duration: .4s;
   animation-fill-mode: forwards;
@@ -440,7 +440,7 @@ Pagination hover styling up with season selection styling */
   position: absolute;
   right: 3px;
   height: 3px;
-  background-color: #589CF7;
+  background-color: rgb(88, 157, 244);
   animation-name: right-to-left;
   animation-duration: .4s;
   animation-fill-mode: forwards;
@@ -455,9 +455,9 @@ Pagination hover styling up with season selection styling */
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 3px solid #4D565B;
+  border: 3px solid rgb(21, 2, 70);
   cursor: pointer;
-  background-color: #2A3436;
+  background-color: rgb(36, 1, 92);
   transition: all .3s ease;
   z-index: 5;
 }
@@ -474,13 +474,13 @@ Pagination hover styling up with season selection styling */
   text-align: center;
   line-height: 45px;
   font-size: 1em;
-  color: #2A3436;
+  color: rgb(36, 1, 92);
 }
 #line-1 .circle-right.active {
   width: 90px;
   height: 45px;
   border-radius: 10px;
-  border-color: #589CF7;
+  border-color: rgb(21, 2, 70);
   transition: all .3s ease;
 }
 #line-1 .circle-right.show::after {
@@ -493,7 +493,7 @@ Pagination hover styling up with season selection styling */
   text-align: center;
   line-height: 45px;
   font-size: 1em;
-  color: #fff;
+  color: rgb(0, 247, 255);
 }
 #line-1 .circle-left {
   left: calc(-15px - 3px);
@@ -508,13 +508,13 @@ Pagination hover styling up with season selection styling */
   text-align: center;
   line-height: 45px;
   font-size: 1em;
-  color: #2A3436;
+  color: rgb(36, 1, 92);
 }
 #line-1 .circle-left.active {
   width: 90px;
   height: 45px;
   border-radius: 10px;
-  border-color: #589CF7;
+  border-color: rgb(21, 2, 70);
   transition: all .3s ease;
 }
 #line-1 .circle-left.show::after {
@@ -527,7 +527,7 @@ Pagination hover styling up with season selection styling */
   text-align: center;
   line-height: 45px;
   font-size: 1em;
-  color: #fff;
+  color: rgb(0, 247, 255);
 }
 
 /* Line 2 Styling */
@@ -536,7 +536,7 @@ Pagination hover styling up with season selection styling */
   position: relative;
   height: 3px;
   width: 250px;
-  background-color: #4D565B;
+  background-color: rgb(21, 2, 70);
 }
 
 #line-2.right::after {
@@ -544,7 +544,7 @@ Pagination hover styling up with season selection styling */
   position: absolute;
   left: 3px;
   height: 3px;
-  background-color: #589CF7;
+  background-color: rgb(88, 157, 244);
   animation-name: left-to-right;
   animation-duration: .4s;
   animation-fill-mode: forwards;
@@ -556,7 +556,7 @@ Pagination hover styling up with season selection styling */
   position: absolute;
   right: 3px;
   height: 3px;
-  background-color: #589CF7;
+  background-color: rgb(88, 157, 244);
   animation-name: right-to-left;
   animation-duration: .4s;
   animation-fill-mode: forwards;
@@ -570,9 +570,9 @@ Pagination hover styling up with season selection styling */
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 3px solid #4D565B;
+  border: 3px solid rgb(21, 2, 70);
   cursor: pointer;
-  background-color: #2A3436;
+  background-color: rgb(36, 1, 92);
   transition: all .3s ease;
   z-index: 5;
 }
@@ -589,13 +589,13 @@ Pagination hover styling up with season selection styling */
   text-align: center;
   line-height: 45px;
   font-size: 1em;
-  color: #2A3436;
+  color: rgb(36, 1, 92);
 }
 #line-2 .circle-right.active {
   width: 90px;
   height: 45px;
   border-radius: 10px;
-  border-color: #589CF7;
+  border-color: rgb(21, 2, 70);
   transition: all .3s ease;
 }
 #line-2 .circle-right.show::after {
@@ -608,7 +608,7 @@ Pagination hover styling up with season selection styling */
   text-align: center;
   line-height: 45px;
   font-size: 1em;
-  color: #fff;
+  color: rgb(0, 247, 255);
 }
 
 /* Character-Jutsu Side-Nav Select Buttons */
