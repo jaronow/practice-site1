@@ -244,47 +244,131 @@ const currentPageInfo = document.getElementById('current-page')
 const paginationButtonsContainer = document.getElementById('pagination-buttons')
 
 //event listener for pagination buttons
+let currentPageLine = ''
+let currentPageHandle = ''
 let paginationLine1 = ''
 let paginationLine2 = ''
 let paginationLine3 = ''
 let paginationHandle1 = ''
 let paginationHandle2 = ''
 let paginationHandle3 = ''
+
 paginationButtonsContainer.addEventListener('click', function(event) {
   console.log(event.target.id)
+  console.log(currentPageLine.id)
+  console.log(currentPageHandle.id)
   switch (event.target.id) {
     case 'Handle-1':
-    paginationLine1.classList.remove('right')
-    paginationLine1.classList.add('left')
-    if (!event.target.classList.contains('active')) {
-      paginationHandle2.classList.remove('active', 'show')
-
-      setTimeout( () => {
-        event.target.classList.add('active')
-      },300)
-
-      setTimeout( () => {
-        event.target.classList.add('show')
-      },600)
+    if (currentPageLine.id === 'line-1' && currentPageHandle.id === 'Handle-2') {
+      paginationLine1.classList.remove('right')
+      paginationLine1.classList.add('left')
+      if (!event.target.classList.contains('active')) {
+        currentPageHandle.classList.remove('active', 'show')
+        currentPageHandle = paginationHandle1
+        setTimeout( () => {
+          event.target.classList.add('active')
+        },300)
+        setTimeout( () => {
+          event.target.classList.add('show')
+        },600)
+        setTimeout( () => {
+          previousPage(1)
+        },600)
+      }
+    } else if (currentPageLine.id === 'line-2' && currentPageHandle.id === 'Handle-3') {
+      currentPageLine.classList.remove('right')
+      currentPageLine.classList.add('left')
+      paginationLine1.classList.add('left')
+      if (!event.target.classList.contains('active')) {
+        currentPageHandle.classList.remove('active', 'show')
+        currentPageLine = paginationLine1
+        currentPageHandle = paginationHandle1
+        setTimeout( () => {
+          event.target.classList.add('active')
+        },300)
+        setTimeout( () => {
+          event.target.classList.add('show')
+        },600)
+        setTimeout( () => {
+          previousPage(2)
+        },600)
+      }
     }
-    previousPage()
-    return
     break;
     case 'Handle-2':
-    paginationLine1.classList.remove('left')
-    paginationLine1.classList.add('right')
-    if (!event.target.classList.contains('active')) {
-      paginationHandle1.classList.remove('active', 'show')
-
-      setTimeout( () => {
-        event.target.classList.add('active')
-      },300)
-
-      setTimeout( () => {
-        event.target.classList.add('show')
-      },600)
+    if (currentPageLine.id === 'line-1' && currentPageHandle.id == 'Handle-1') {
+      paginationLine1.classList.remove('left')
+      paginationLine1.classList.add('right')
+      if (!event.target.classList.contains('active')) {
+        currentPageHandle.classList.remove('active', 'show')
+        currentPageHandle = paginationHandle2
+        setTimeout( () => {
+          event.target.classList.add('active')
+        },300)
+        setTimeout( () => {
+          event.target.classList.add('show')
+        },600)
+        setTimeout( () => {
+          nextPage(1)
+        },600)
+      }
+    } else if (currentPageLine.id === 'line-2' && currentPageHandle.id == 'Handle-3') {
+      currentPageLine.classList.remove('right')
+      currentPageLine.classList.add('left')
+      if (!event.target.classList.contains('active')) {
+        currentPageHandle.classList.remove('active', 'show')
+        currentPageHandle = paginationHandle2
+        currentPageLine = paginationLine1
+        setTimeout( () => {
+          event.target.classList.add('active')
+        },300)
+        setTimeout( () => {
+          event.target.classList.add('show')
+        },600)
+        setTimeout( () => {
+          previousPage(1)
+        },600)
+      }
     }
-    nextPage()
+    break;
+    case 'Handle-3':
+    if (currentPageLine.id === 'line-1' && currentPageHandle.id === 'Handle-2') {
+      paginationLine1.classList.remove('right')
+      paginationLine2.classList.add('right')
+      if (!event.target.classList.contains('active')) {
+        currentPageHandle.classList.remove('active', 'show')
+        currentPageLine = paginationLine2
+        currentPageHandle = paginationHandle3
+        setTimeout( () => {
+          event.target.classList.add('active')
+        },300)
+        setTimeout( () => {
+          event.target.classList.add('show')
+        },600)
+        setTimeout( () => {
+          nextPage(1)
+        },600)
+      }
+    } else if (currentPageLine.id === 'line-1' && currentPageHandle.id === 'Handle-1') {
+      paginationLine1.classList.remove('left')
+      paginationLine1.classList.add('right')
+      paginationLine1.classList.remove('right')
+      paginationLine2.classList.add('right')
+      if (!event.target.classList.contains('active')) {
+        currentPageHandle.classList.remove('active', 'show')
+        currentPageLine = paginationLine2
+        currentPageHandle = paginationHandle3
+        setTimeout( () => {
+          event.target.classList.add('active')
+        },300)
+        setTimeout( () => {
+          event.target.classList.add('show')
+        },600)
+        setTimeout( () => {
+          nextPage(2)
+        },600)
+      }
+    }
     break;
     default:
     return
@@ -360,31 +444,25 @@ function createPagination() {
   paginationHandle1 = document.getElementById('Handle-1')
   paginationHandle2 = document.getElementById('Handle-2')
   paginationHandle3 = document.getElementById('Handle-3')
+  currentPageLine = paginationLine1
+  currentPageHandle = paginationHandle1
 }
 
 //functions to change pages of table
-function changePage(action) {
-  switch(action) {
-    case 'next': nextPage()
-    break;
-    case 'previous': previousPage()
-    break;
-  }
-}
 
-function nextPage() {
+function nextPage(number) {
   if (currentPage === numOfPages) {
     return
   }
-  currentPage += 1
+  currentPage += number
   createEpisodeList()
 }
 
-function previousPage() {
+function previousPage(number) {
   if (currentPage === 1) {
     return
   }
-  currentPage -= 1
+  currentPage -= number
   createEpisodeList()
 }
 

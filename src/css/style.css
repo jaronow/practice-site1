@@ -414,6 +414,8 @@ Pagination hover styling up with season selection styling */
   display: flex;
 }
 
+/* Line 1 Styling */
+
 #line-1 {
   position: relative;
   height: 3px;
@@ -517,6 +519,87 @@ Pagination hover styling up with season selection styling */
 }
 #line-1 .circle-left.show::after {
   content: 'Page 1';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: #fff;
+}
+
+/* Line 2 Styling */
+
+#line-2 {
+  position: relative;
+  height: 3px;
+  width: 250px;
+  background-color: #4D565B;
+}
+
+#line-2.right::after {
+  content: '';
+  position: absolute;
+  left: 3px;
+  height: 3px;
+  background-color: #589CF7;
+  animation-name: left-to-right;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#line-2.left::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  height: 3px;
+  background-color: #589CF7;
+  animation-name: right-to-left;
+  animation-duration: .4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+#line-2 .circle-right {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #4D565B;
+  cursor: pointer;
+  background-color: #2A3436;
+  transition: all .3s ease;
+  z-index: 5;
+}
+#line-2 .circle-right {
+  right: calc(-15px - 3px);
+}
+#line-2 .circle-right ::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1em;
+  color: #2A3436;
+}
+#line-2 .circle-right.active {
+  width: 90px;
+  height: 45px;
+  border-radius: 10px;
+  border-color: #589CF7;
+  transition: all .3s ease;
+}
+#line-2 .circle-right.show::after {
+  content: 'Page 3';
   position: absolute;
   top: 0;
   right: 0;
