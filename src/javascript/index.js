@@ -240,7 +240,6 @@ let currentPage = 1
 const numPerPage = 10
 let numOfPages = 1
 let paginationInfo = new Object()
-const currentPageInfo = document.getElementById('current-page')
 const paginationButtonsContainer = document.getElementById('pagination-buttons')
 
 //event listener for pagination buttons
@@ -478,7 +477,6 @@ function createEpisodeList() {
 // function that uses episode-template.hbs & pagination-template to create actual table w/ buttons
 function createTable() {
   seasonTable.innerHTML = episodeTempate(episodes)
-  currentPageInfo.innerHTML = `Page ${currentPage} of ${numOfPages}`
   const tableCaption = document.getElementById('season-number')
   tableCaption.innerHTML = seasonTitle
   seasonTable.classList.add('active-table')
